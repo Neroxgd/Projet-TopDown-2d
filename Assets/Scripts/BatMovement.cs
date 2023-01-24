@@ -25,7 +25,8 @@ public class BatMovement : MonoBehaviour
         .OnComplete(Fly)
         .SetSpeedBased(true)
         .SetDelay(Random.Range(3, 10));
-        if (indexDeplacement == PointDeplacements.Length) indexDeplacement = 0;
+        if (indexDeplacement == PointDeplacements.Length - 1)
+            indexDeplacement = 0;
     }
 
     void OnTriggerEnter2D(Collider2D other)
