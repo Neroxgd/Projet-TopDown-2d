@@ -19,6 +19,7 @@ public class PlayerLife : MonoBehaviour
         impulseSource.GenerateImpulseWithForce(shakeForce);
         life.DOFillAmount(OrigineFillAmout - dmg / 100, 1);
         OrigineFillAmout -= dmg / 100;
+        OrigineFillAmout = Mathf.Clamp(OrigineFillAmout, 0, 1);
         if (dmg > 0)
             AudioManager.Instance.PlayAudioClip("Hit_Hurt21", false);
     }

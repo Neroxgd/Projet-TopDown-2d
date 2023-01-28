@@ -8,6 +8,11 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 direction;
     [SerializeField][Range(1, 200)] private int speed = 1;
     [SerializeField] private Rigidbody2D rbPlayer;
+    private Inventory inventory;
+    void Start()
+    {
+        inventory = new Inventory();
+    }
     public void Move(InputAction.CallbackContext context)
     {
         direction = context.ReadValue<Vector2>();

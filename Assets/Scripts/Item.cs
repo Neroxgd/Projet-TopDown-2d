@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public class Item
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public enum ItemType
     {
-        if (other.CompareTag("player"))
-        {
-            PickUp();
-            other.GetComponent<PlayerLife>().TakeDamage(-30);
-        }
+        Sword,
+        Bow,
+        HealtPotion, 
+        Torch,
     }
-    public void PickUp()
-    {
-        AudioManager.Instance.PlayAudioClip("Powerup44", false);
-        Destroy(gameObject);
-    }
+    public ItemType itemType;
+    public int amount;
 }
