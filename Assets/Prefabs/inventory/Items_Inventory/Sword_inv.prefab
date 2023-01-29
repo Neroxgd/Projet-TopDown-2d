@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1532989641171292498}
   - component: {fileID: 7677165709731354603}
   m_Layer: 5
-  m_Name: sprite_item
+  m_Name: Sword_inv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
