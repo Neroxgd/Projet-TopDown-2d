@@ -6,6 +6,6 @@ public class SelectObject : MonoBehaviour
 {
     public void Select()
     {
-        print("ejeee");
+        
     }
 }

@@ -15,6 +15,6 @@ public abstract class ItemObject : ScriptableObject
     public ItemType type;
     [TextArea(15,20)]
     public string description;
-    public bool stackable;
+    public bool isStackable;
     public int objectCount;
 }

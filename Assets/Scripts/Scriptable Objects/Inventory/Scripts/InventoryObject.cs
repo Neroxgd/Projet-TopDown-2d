@@ -10,7 +10,7 @@ public class InventoryObject : ScriptableObject
     {
         for (int i = 0; i < Container.Count; i++)
         {
-            if (Container[i].item == _item)
+            if (Container[i].item == _item && Container[i].item.isStackable)
             {
                 Container[i].AddAmount(_amount);
                 return;

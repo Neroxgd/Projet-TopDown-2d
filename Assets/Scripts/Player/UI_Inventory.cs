@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class UI_Inventory : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class UI_Inventory : MonoBehaviour
     public Transform Slot { get { return slot; } }
     private bool afficheInv = false;
     public static UI_Inventory Instance { private set; get; }
+    private List<GameObject> ui_InventoryObjectInstantiat;
 
     void Awake()
     {
@@ -34,6 +36,21 @@ public class UI_Inventory : MonoBehaviour
 
     public void UpdateInventory(ItemObject itemObject)
     {
-        GameObject item = Instantiate(itemObject.prefab, Vector3.zero, Quaternion.identity, InstantiatHere);
+        if (itemObject.isStackable)
+            for (int i = 0; i < inventory.Container.Count; i++)
+            {
+                if (inventory.Container[i].item.type == itemObject.type)
+                {
+
+                    if (inventory.Container.Count > InstantiatHere.childCount)
+                        Instantiate(itemObject.prefab, Vector3.zero, Quaternion.identity, InstantiatHere);
+                    InstantiatHere.GetChild(i).GetChild(0).GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString();
+                    return;
+                }
+            }
+        GameObject itemInstantiat = Instantiate(itemObject.prefab, Vector3.zero, Quaternion.identity, InstantiatHere);
+        // ui_InventoryObjectInstantiat.Add(itemInstantiat);
+        itemInstantiat.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = 1.ToString();
     }
+
 }
