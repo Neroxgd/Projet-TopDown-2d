@@ -8,16 +8,17 @@ public class UI_Inventory : MonoBehaviour
 {
     [SerializeField] private InventoryObject inventory;
     [SerializeField] private Transform InstantiatHere;
+    private int instantiatCount = 0;
     [SerializeField] private GameObject inv;
-    [SerializeField] private Transform buttonSelect;
-    public Transform ButtonSelect { get { return buttonSelect; } }
-    [SerializeField] private Transform slot;
-    [SerializeField] private GameObject buttonToInstanciat;
-    public GameObject ButtonToInstanciat { get { return buttonToInstanciat; } }
-    public Transform Slot { get { return slot; } }
+    // [SerializeField] private Transform buttonSelect;
+    // public Transform ButtonSelect { get { return buttonSelect; } }
+    // [SerializeField] private Transform slot;
+    // [SerializeField] private GameObject buttonToInstanciat;
+    // public GameObject ButtonToInstanciat { get { return buttonToInstanciat; } }
+    // public Transform Slot { get { return slot; } }
     private bool afficheInv = false;
     public static UI_Inventory Instance { private set; get; }
-    private List<GameObject> ui_InventoryObjectInstantiat;
+    // private List<GameObject> ui_InventoryObjectInstantiat;
 
     void Awake()
     {
@@ -42,15 +43,19 @@ public class UI_Inventory : MonoBehaviour
                 if (inventory.Container[i].item.type == itemObject.type)
                 {
 
-                    if (inventory.Container.Count > InstantiatHere.childCount)
-                        Instantiate(itemObject.prefab, Vector3.zero, Quaternion.identity, InstantiatHere);
-                    InstantiatHere.GetChild(i).GetChild(0).GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString();
+                    if (inventory.Container.Count > instantiatCount)
+                    {
+                        Instantiate(itemObject.prefab_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+                        instantiatCount++;
+                    }
+                    InstantiatHere.GetChild(i).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString();
                     return;
                 }
             }
-        GameObject itemInstantiat = Instantiate(itemObject.prefab, Vector3.zero, Quaternion.identity, InstantiatHere);
+        GameObject itemInstantiat = Instantiate(itemObject.prefab_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+        instantiatCount++;
         // ui_InventoryObjectInstantiat.Add(itemInstantiat);
-        itemInstantiat.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = 1.ToString();
+        itemInstantiat.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";
     }
 
 }

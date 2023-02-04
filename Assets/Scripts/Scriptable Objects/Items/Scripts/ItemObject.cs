@@ -11,10 +11,10 @@ public enum ItemType
 
 public abstract class ItemObject : ScriptableObject
 {
-    public GameObject prefab;
+    public GameObject prefab_UI;
+    public GameObject prefab_World;
     public ItemType type;
-    [TextArea(15,20)]
-    public string description;
+    [TextArea(15,20)] public string description;
     public bool isStackable;
     public int objectCount;
 }

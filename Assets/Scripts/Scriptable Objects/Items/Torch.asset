@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447625d0047c2b249bfc79394a6235a8, type: 3}
   m_Name: Torch
   m_EditorClassIdentifier: 
-  prefab: {fileID: 4173686599761962551, guid: 48b5e9d272a204048b8ce7afc557a0de, type: 3}
+  prefab_UI: {fileID: 4173686599761962551, guid: 48b5e9d272a204048b8ce7afc557a0de, type: 3}
+  prefab_World: {fileID: 3139757657234131619, guid: 795e750768e9e364798e3440095cbbd4, type: 3}
   type: 2
   description: 
   isStackable: 1
-  objectCount: 3
+  objectCount: 1
   radiusLight: 0
   isEquiped: 0
