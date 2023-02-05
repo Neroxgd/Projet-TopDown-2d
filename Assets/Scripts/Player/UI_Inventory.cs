@@ -8,7 +8,9 @@ public class UI_Inventory : MonoBehaviour
 {
     [SerializeField] private InventoryObject inventory;
     [SerializeField] private Transform InstantiatHere;
+    [SerializeField] private GetReferenceForButton _getReferenceForButton;
     private int instantiatCount = 0;
+    public int InstantiatCount { get { return instantiatCount; } set { instantiatCount = value; } }
     [SerializeField] private GameObject inv;
     // [SerializeField] private Transform buttonSelect;
     // public Transform ButtonSelect { get { return buttonSelect; } }
@@ -32,6 +34,8 @@ public class UI_Inventory : MonoBehaviour
         {
             afficheInv = !afficheInv;
             inv.SetActive(afficheInv);
+            if (!afficheInv)
+                _getReferenceForButton.IndexButton = -1;
         }
     }
 

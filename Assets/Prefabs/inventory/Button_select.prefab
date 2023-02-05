@@ -124,7 +124,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8660793326085513094}
         m_TargetAssemblyTypeName: SelectObject, Assembly-CSharp
-        m_MethodName: Select
+        m_MethodName: InitializeIndex
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -146,4 +146,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76d2e5e1990f7e045a70d64bcc9c805e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}

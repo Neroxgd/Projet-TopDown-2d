@@ -57,7 +57,11 @@ PrefabInstance:
       objectReference: {fileID: -988036414, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
     - target: {fileID: 1984650627523828431, guid: eb5ddd054e69b2e43a608c6babc615e2, type: 3}
       propertyPath: m_Name
-      value: torch
+      value: torch Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3533166969414047808, guid: eb5ddd054e69b2e43a608c6babc615e2, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: 888f4aea2d8ff3049bfe407899f7ede9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb5ddd054e69b2e43a608c6babc615e2, type: 3}
