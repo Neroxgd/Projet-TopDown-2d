@@ -35,7 +35,11 @@ public class UI_Inventory : MonoBehaviour
             afficheInv = !afficheInv;
             inv.SetActive(afficheInv);
             if (!afficheInv)
+            {
                 _getReferenceForButton.IndexButton = -1;
+                _getReferenceForButton.TextDropItem(false);
+            }
+
         }
     }
 
