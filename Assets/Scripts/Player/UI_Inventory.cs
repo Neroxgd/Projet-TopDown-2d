@@ -8,7 +8,7 @@ public class UI_Inventory : MonoBehaviour
 {
     [SerializeField] private InventoryObject inventory;
     [SerializeField] private Transform InstantiatHere;
-    [SerializeField] private GetReferenceForButton _getReferenceForButton;
+    [SerializeField] private SlotsManager _slotsManager;
     private int instantiatCount = 0;
     public int InstantiatCount { get { return instantiatCount; } set { instantiatCount = value; } }
     [SerializeField] private GameObject inv;
@@ -18,7 +18,7 @@ public class UI_Inventory : MonoBehaviour
     // [SerializeField] private GameObject buttonToInstanciat;
     // public GameObject ButtonToInstanciat { get { return buttonToInstanciat; } }
     // public Transform Slot { get { return slot; } }
-    private bool afficheInv = false;
+    public bool ShowInventory { get; private set; } = false;
     public static UI_Inventory Instance { private set; get; }
     // private List<GameObject> ui_InventoryObjectInstantiat;
 
@@ -32,14 +32,13 @@ public class UI_Inventory : MonoBehaviour
     {
         if (context.started)
         {
-            afficheInv = !afficheInv;
-            inv.SetActive(afficheInv);
-            if (!afficheInv)
+            ShowInventory = !ShowInventory;
+            inv.SetActive(ShowInventory);
+            if (!ShowInventory)
             {
-                _getReferenceForButton.IndexButton = -1;
-                _getReferenceForButton.TextDropItem(false);
+                _slotsManager.IndexButton = -1;
+                _slotsManager.Desappears();
             }
-
         }
     }
 

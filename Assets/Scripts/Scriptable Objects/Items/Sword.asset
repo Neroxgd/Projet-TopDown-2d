@@ -20,4 +20,5 @@ MonoBehaviour:
   objectCount: 1
   atkPower: 0
   defencePower: 0
+  equipable: 0
   isEquiped: 0

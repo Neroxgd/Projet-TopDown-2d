@@ -2,27 +2,33 @@ using UnityEngine;
 
 public class SelectObject : MonoBehaviour
 {
-    private GetReferenceForButton RefButton;
+    private SlotsManager _slotsManager;
 
     void Start()
     {
-        RefButton = transform.parent.parent.GetComponent<GetReferenceForButton>();
+        _slotsManager = transform.parent.parent.GetComponent<SlotsManager>();
     }
 
     public void InitializeIndex()
     {
-        for (int i = 0; i < RefButton.inventory.Container.Count; i++)
+        for (int i = 0; i < _slotsManager.inventory.Container.Count; i++)
         {
             if (transform.parent.parent.GetChild(i) == transform.parent)
             {
-                RefButton.IndexButton = i;
-                RefButton.TextDropItem(true);
-                break;
+                _slotsManager.Desappears();
+                _slotsManager.IndexButton = i;
+                if(_slotsManager.inventory.Container[i].item is WeaponObject)
+                {
+                    // WeaponObject weaponObject = (WeaponObject)_slotsManager.inventory.Container[i].item;
+                    _slotsManager.Equipable();
+                }
+                _slotsManager.Drop();
+                    break;
             }
             else
             {
-                RefButton.IndexButton = -1;
-                RefButton.TextDropItem(false);
+                _slotsManager.IndexButton = -1;
+                _slotsManager.Desappears();
             }
         }
     }
