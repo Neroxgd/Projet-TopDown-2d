@@ -6,7 +6,6 @@ using UnityEngine;
 public class WeaponObject : ItemObject
 {
     public int atkPower;
-    public int defencePower;
     public bool equipable;
     public bool isEquiped;
     void Awake()

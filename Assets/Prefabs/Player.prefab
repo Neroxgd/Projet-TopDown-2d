@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2427964167995022086}
   - component: {fileID: 2427964167995022089}
   - component: {fileID: 2427964167995022088}
+  - component: {fileID: 8277874766218779830}
+  - component: {fileID: 6759724665872925174}
   m_Layer: 0
   m_Name: Player
   m_TagString: player
@@ -168,6 +170,38 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 707143f3-d4f2-4dd6-9009-6b3bad8e8c10
     m_ActionName: Player/Inventory[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GetReferenceForButton, Assembly-CSharp
+        m_MethodName: DropItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9ef814f7-bb71-488a-86cf-b27462785a78
+    m_ActionName: Player/Drop_Item[/Keyboard/t]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SlotsManager, Assembly-CSharp
+        m_MethodName: EquipeItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c8c241a8-10a5-4eaf-bd5e-34632de365a4
+    m_ActionName: Player/Equipe_Item[/Keyboard/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -185,6 +219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff66a2434940a6449a01d3165526f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uI_Inventory: {fileID: 0}
   speed: 6
   rbPlayer: {fileID: 2427964167995022083}
 --- !u!58 &2427964167995022086
@@ -216,10 +251,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: {fileID: 0}
-  vcam: {fileID: 0}
   impulseSource: {fileID: 2427964167995022088}
-  cam: {fileID: 0}
-  shakeForce: 10
+  shakeForce: 0.5
 --- !u!114 &2427964167995022088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,3 +306,28 @@ MonoBehaviour:
     m_DissipationDistance: 100
     m_PropagationSpeed: 343
   m_DefaultVelocity: {x: 1, y: 1, z: 0}
+--- !u!114 &8277874766218779830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427964167995022081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6cc6dcc0b17204f8a52b931641d55c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
+--- !u!114 &6759724665872925174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427964167995022081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41ce2df5f0d0d4a4d8c7cb4caaa53e5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

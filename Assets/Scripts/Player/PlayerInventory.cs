@@ -28,6 +28,12 @@ public class PlayerInventory : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        for (int i = 0; i < inventory.Container.Count; i++)
+        {
+            var oldWeaponObject = inventory.Container[i].item as WeaponObject;
+            if (oldWeaponObject != null && oldWeaponObject.isEquiped)
+                oldWeaponObject.isEquiped = false;
+        }
         inventory.Container.Clear();
     }
 }

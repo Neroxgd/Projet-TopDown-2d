@@ -22,6 +22,11 @@ public class SelectObject : MonoBehaviour
                     // WeaponObject weaponObject = (WeaponObject)_slotsManager.inventory.Container[i].item;
                     _slotsManager.Equipable();
                 }
+
+                if (_slotsManager.inventory.Container[i].item is LightObject)
+                {
+                    
+                }
                 _slotsManager.Drop();
                     break;
             }
