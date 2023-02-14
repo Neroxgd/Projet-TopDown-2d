@@ -18,6 +18,5 @@ MonoBehaviour:
   description: 
   isStackable: 0
   objectCount: 1
+  isEquipable: 1
   atkPower: 12
-  equipable: 0
-  isEquiped: 0

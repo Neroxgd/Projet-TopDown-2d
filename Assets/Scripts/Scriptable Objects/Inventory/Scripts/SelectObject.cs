@@ -17,18 +17,8 @@ public class SelectObject : MonoBehaviour
             {
                 _slotsManager.Desappears();
                 _slotsManager.IndexButton = i;
-                if(_slotsManager.inventory.Container[i].item is WeaponObject)
-                {
-                    // WeaponObject weaponObject = (WeaponObject)_slotsManager.inventory.Container[i].item;
-                    _slotsManager.Equipable();
-                }
-
-                if (_slotsManager.inventory.Container[i].item is LightObject)
-                {
-                    
-                }
-                _slotsManager.Drop();
-                    break;
+                _slotsManager.ShowTextInventory(_slotsManager.inventory.Container[i].item.TextInv());
+                break;
             }
             else
             {

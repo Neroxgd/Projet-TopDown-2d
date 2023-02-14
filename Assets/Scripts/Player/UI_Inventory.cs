@@ -49,7 +49,6 @@ public class UI_Inventory : MonoBehaviour
             {
                 if (inventory.Container[i].item.type == itemObject.type)
                 {
-
                     if (inventory.Container.Count > instantiatCount)
                     {
                         Instantiate(itemObject.prefab_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));

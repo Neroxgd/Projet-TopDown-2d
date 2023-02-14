@@ -6,8 +6,12 @@ using UnityEngine;
 public class WeaponObject : ItemObject
 {
     public int atkPower;
-    public bool equipable;
-    public bool isEquiped;
+
+    public override string TextInv()
+    {
+        return "(Y) to equipe item\n(T) to drop item";
+    }
+
     void Awake()
     {
         type = ItemType.Sword;

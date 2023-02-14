@@ -29,31 +29,33 @@ public class SlotsManager : MonoBehaviour
 
     public void EquipeItem(InputAction.CallbackContext context)
     {
-        if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item is WeaponObject)
+        print("gsgq");
+        if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item.isEquipable)
         {
-            WeaponObject weaponObject = (WeaponObject)inventory.Container[IndexButton].item;
-            if (!weaponObject.isEquiped)
+            // WeaponObject weaponObject = (WeaponObject)inventory.Container[IndexButton].item;
+            if (!inventory.Container[IndexButton].isEquiped)
             {
-                PlayerStatistic.Instance.Attack = weaponObject.atkPower;
+                // PlayerStatistic.Instance.Attack = weaponObject.atkPower;
                 for (int i = 0; i < inventory.Container.Count; i++)
                 {
-                    WeaponObject oldWeaponObject = inventory.Container[i].item as WeaponObject;
-                    if (oldWeaponObject != null && oldWeaponObject.isEquiped)
+                    // WeaponObject oldWeaponObject = inventory.Container[i].item as WeaponObject;
+                    if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton])
                     {
-                        oldWeaponObject.isEquiped = false;
+                        inventory.Container[i].isEquiped = false;
                         transform.GetChild(i).GetComponent<Image>().color = Color.white;
                         break;
                     }
                 }
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
-                weaponObject.isEquiped = true;
+                inventory.Container[IndexButton].isEquiped = true;
                 print("jeuaa");
             }
             else
             {
-                PlayerStatistic.Instance.Attack -= weaponObject.atkPower;
+                // PlayerStatistic.Instance.Attack -= weaponObject.atkPower;
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
-                weaponObject.isEquiped = false;
+                inventory.Container[IndexButton].isEquiped = false;
+                
             }
         }
     }
@@ -63,13 +65,8 @@ public class SlotsManager : MonoBehaviour
         textDrop.text = "";
     }
 
-    public void Equipable()
+    public void ShowTextInventory(string textToShow)
     {
-        textDrop.text += "(Y) to equipe item\n";
-    }
-
-    public void Drop()
-    {
-        textDrop.text += "(T) to drop item";
+        textDrop.text += textToShow;
     }
 }

@@ -25,6 +25,8 @@ public class InventorySlot
 {
     public ItemObject item;
     public int amount;
+    public bool isEquiped;
+
     public InventorySlot(ItemObject _item, int _amount)
     {
         item = _item;
