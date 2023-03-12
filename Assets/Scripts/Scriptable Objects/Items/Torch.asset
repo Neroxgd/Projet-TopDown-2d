@@ -18,5 +18,7 @@ MonoBehaviour:
   description: 
   isStackable: 1
   objectCount: 1
+  isEquipable: 1
   radiusLight: 0
   isEquiped: 0
+  isTypeEquiped: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 public class WeaponObject : ItemObject
 {
     public int atkPower;
+    public bool isTypeEquiped;
 
     public override string TextInv()
     {

@@ -7,6 +7,7 @@ public class LightObject : ItemObject
 {
     public int radiusLight;
     public bool isEquiped;
+    public bool isTypeEquiped;
 
     public override string TextInv()
     {

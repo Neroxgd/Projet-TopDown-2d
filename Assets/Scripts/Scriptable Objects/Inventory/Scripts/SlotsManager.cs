@@ -31,29 +31,47 @@ public class SlotsManager : MonoBehaviour
     {
         if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item.isEquipable)
         {
-            // WeaponObject weaponObject = (WeaponObject)inventory.Container[IndexButton].item;
+            WeaponObject weaponObject = inventory.Container[IndexButton].item as WeaponObject;
+            LightObject lightObject = inventory.Container[IndexButton].item as LightObject;
+            ItemObject globalObject = null;
+            if (weaponObject != null)
+                globalObject = weaponObject;
+            else if (lightObject != null)
+                globalObject = lightObject;
+            //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
-                // PlayerStatistic.Instance.Attack = weaponObject.atkPower;
-                for (int i = 0; i < inventory.Container.Count; i++)
-                {
-                    // WeaponObject oldWeaponObject = inventory.Container[i].item as WeaponObject;
-                    if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton])
+                if (weaponObject != null)
+                    PlayerStatistic.Instance.Attack = weaponObject.atkPower;
+                if ((weaponObject != null && weaponObject.isTypeEquiped) || (lightObject != null && lightObject.isTypeEquiped)/* || add all cast*/)
+                    for (int i = 0; i < inventory.Container.Count; i++)
                     {
-                        inventory.Container[i].isEquiped = false;
-                        transform.GetChild(i).GetComponent<Image>().color = Color.white;
-                        break;
+                        if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton] && globalObject == inventory.Container[i].item)
+                        {
+                            inventory.Container[i].isEquiped = false;
+                            transform.GetChild(i).GetComponent<Image>().color = Color.white;
+                            break;
+                        }
                     }
-                }
+                if (weaponObject != null)
+                    weaponObject.isTypeEquiped = true;
+                else if (lightObject != null)
+                    lightObject.isTypeEquiped = true;
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
             }
             else
             {
-                // PlayerStatistic.Instance.Attack -= weaponObject.atkPower;
+                if (weaponObject != null)
+                {
+                    PlayerStatistic.Instance.Attack -= weaponObject.atkPower;
+                    weaponObject.isTypeEquiped = false;
+                }
+                if (lightObject != null)
+                    lightObject.isTypeEquiped = false;
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
                 inventory.Container[IndexButton].isEquiped = false;
-                
+
             }
         }
     }
