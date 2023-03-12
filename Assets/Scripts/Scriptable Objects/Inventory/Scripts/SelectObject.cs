@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectObject : MonoBehaviour
 {
@@ -11,13 +12,14 @@ public class SelectObject : MonoBehaviour
 
     public void InitializeIndex()
     {
-        for (int i = 0; i < _slotsManager.inventory.Container.Count; i++)
+        for (int i = 0; i < transform.parent.parent.childCount; i++)
         {
             if (transform.parent.parent.GetChild(i) == transform.parent)
             {
                 _slotsManager.Desappears();
                 _slotsManager.IndexButton = i;
-                _slotsManager.ShowTextInventory(_slotsManager.inventory.Container[i].item.TextInv());
+                if (i < _slotsManager.inventory.Container.Count)
+                    _slotsManager.ShowTextInventory(_slotsManager.inventory.Container[i].item.TextInv());
                 break;
             }
             else

@@ -29,7 +29,6 @@ public class SlotsManager : MonoBehaviour
 
     public void EquipeItem(InputAction.CallbackContext context)
     {
-        print("gsgq");
         if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item.isEquipable)
         {
             // WeaponObject weaponObject = (WeaponObject)inventory.Container[IndexButton].item;
@@ -48,7 +47,6 @@ public class SlotsManager : MonoBehaviour
                 }
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
-                print("jeuaa");
             }
             else
             {
