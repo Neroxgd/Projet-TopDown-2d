@@ -8,7 +8,8 @@ public class PlayerStatistic : MonoBehaviour
     private int life;
     public int Life { get { return life; } set { life = Mathf.Clamp(value, 0, 100); } }
     public int Attack { get; set; }
-    public int Armor { get; set; }
+    public int Armor_Helmet { get; set; }
+    public int Armor_Chestplate { get; set; }
     public float MoveSpeed { get; set; }
 
     void Awake() { Instance = this; }

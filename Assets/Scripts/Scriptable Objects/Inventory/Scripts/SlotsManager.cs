@@ -33,17 +33,27 @@ public class SlotsManager : MonoBehaviour
         {
             WeaponObject weaponObject = inventory.Container[IndexButton].item as WeaponObject;
             LightObject lightObject = inventory.Container[IndexButton].item as LightObject;
+            Armor_HelmetObject helmetObject = inventory.Container[IndexButton].item as Armor_HelmetObject;
+            Armor_ChestplateObject chestplateObject = inventory.Container[IndexButton].item as Armor_ChestplateObject;
             ItemObject globalObject = null;
             if (weaponObject != null)
                 globalObject = weaponObject;
             else if (lightObject != null)
                 globalObject = lightObject;
+            else if (helmetObject != null)
+                globalObject = helmetObject;
+            else if (chestplateObject)
+                globalObject = chestplateObject;
             //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
                 if (weaponObject != null)
                     PlayerStatistic.Instance.Attack = weaponObject.atkPower;
-                if ((weaponObject != null && weaponObject.isTypeEquiped) || (lightObject != null && lightObject.isTypeEquiped)/* || add all cast*/)
+                else if (helmetObject != null)
+                    PlayerStatistic.Instance.Armor_Helmet = helmetObject.defPower;
+                else if (chestplateObject != null )
+                    PlayerStatistic.Instance.Armor_Chestplate = chestplateObject.defPower;
+                if ((weaponObject != null && weaponObject.isTypeEquiped) || (lightObject != null && lightObject.isTypeEquiped) || (helmetObject != null && helmetObject.isTypeEquiped) || (chestplateObject != null && chestplateObject.isTypeEquiped)/* || add all cast*/)
                     for (int i = 0; i < inventory.Container.Count; i++)
                     {
                         if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton] && globalObject == inventory.Container[i].item)
@@ -57,6 +67,10 @@ public class SlotsManager : MonoBehaviour
                     weaponObject.isTypeEquiped = true;
                 else if (lightObject != null)
                     lightObject.isTypeEquiped = true;
+                else if (helmetObject != null)
+                    helmetObject.isTypeEquiped = true;
+                else if (chestplateObject != null)
+                    chestplateObject.isTypeEquiped = true;
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
             }
@@ -67,11 +81,20 @@ public class SlotsManager : MonoBehaviour
                     PlayerStatistic.Instance.Attack -= weaponObject.atkPower;
                     weaponObject.isTypeEquiped = false;
                 }
-                if (lightObject != null)
+                else if (lightObject != null)
                     lightObject.isTypeEquiped = false;
+                else if (helmetObject != null)
+                {
+                    PlayerStatistic.Instance.Armor_Helmet -= helmetObject.defPower;
+                    helmetObject.isTypeEquiped = false;
+                }
+                else if (chestplateObject != null)
+                {
+                    PlayerStatistic.Instance.Armor_Chestplate -= chestplateObject.defPower;
+                    chestplateObject.isTypeEquiped = false;
+                }
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
                 inventory.Container[IndexButton].isEquiped = false;
-
             }
         }
     }

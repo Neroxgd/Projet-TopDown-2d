@@ -10,7 +10,7 @@ public class WeaponObject : ItemObject
 
     public override string TextInv()
     {
-        return "(Y) to equipe item\n(T) to drop item";
+        return $"attack : +{atkPower}\n(Y) to equipe item\n(T) to drop item";
     }
 
     void Awake()

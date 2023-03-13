@@ -7,6 +7,8 @@ public enum ItemType
     Sword,
     HealtPotion,
     Torch,
+    Helmet,
+    Chestplate,
 }
 
 public abstract class ItemObject : ScriptableObject

@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
         else if (context.started)
         {
             direction = Vector2.zero;
+            if (slotsManager.IndexButton == -1) return;
             slotsManager.Desappears();
             if (context.ReadValue<Vector2>() == Vector2.right && (slotsManager.IndexButton + 1) % indexRaw != 0)
                 slotsManager.IndexButton++;
