@@ -20,3 +20,5 @@ MonoBehaviour:
   objectCount: 1
   isEquipable: 1
   atkPower: 12
+  isTypeEquiped: 1
+  weaponSpeed: 0.5

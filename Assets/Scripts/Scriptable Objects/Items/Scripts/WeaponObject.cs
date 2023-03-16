@@ -7,6 +7,7 @@ public class WeaponObject : ItemObject
 {
     public int atkPower;
     public bool isTypeEquiped;
+    public float weaponSpeed;
 
     public override string TextInv()
     {

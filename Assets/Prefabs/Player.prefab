@@ -364,4 +364,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uI_Inventory: {fileID: 0}
   prefabAtk: {fileID: 2585694542484511278, guid: 1ae6a689b18010b449ce309a9f4f6544, type: 3}
+  defaultSprite: {fileID: -1716252731, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
   inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}

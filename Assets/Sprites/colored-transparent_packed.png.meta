@@ -2835,7 +2835,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_130
+      name: stick
       rect:
         serializedVersion: 2
         x: 528
@@ -23002,8 +23002,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23101,7 +23101,6 @@ TextureImporter:
       colored-transparent_packed_371: -1528990128
       colored-transparent_packed_323: 1767254435
       colored-transparent_packed_80: -69190361
-      colored-transparent_packed_130: -1716252731
       colored-transparent_packed_455: -822080926
       colored-transparent_packed_965: 690138403
       colored-transparent_packed_1049: 574112034
@@ -23180,6 +23179,7 @@ TextureImporter:
       colored-transparent_packed_652: -2064835732
       colored-transparent_packed_1047: 526916066
       colored-transparent_packed_683: -634199349
+      stick: -1716252731
       colored-transparent_packed_928: 801614468
       colored-transparent_packed_596: 485542382
       colored-transparent_packed_326: 1989278978
