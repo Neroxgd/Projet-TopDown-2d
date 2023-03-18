@@ -13,7 +13,7 @@ public class PlayerLife : MonoBehaviour
         PlayerStatistic.Instance.Life = 100;
     }
 
-    public void TakeDamage(int dmg)
+    public void TakeDamage(float dmg)
     {
         impulseSource.GenerateImpulseWithForce(shakeForce);
         life.DOFillAmount((PlayerStatistic.Instance.Life - dmg) / 100, 1);

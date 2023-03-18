@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Heart : MonoBehaviour
 {
+    [SerializeField] private float healtGiven;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("player"))
         {
             PickUp();
-            other.GetComponent<PlayerLife>().TakeDamage(-30);
+            other.GetComponent<PlayerLife>().TakeDamage(-healtGiven);
         }
     }
     public void PickUp()

@@ -9,7 +9,7 @@ public class BatMovement : MonoBehaviour
     private int indexDeplacement = 0;
     [SerializeField] private float speedBat = 1;
     [SerializeField] private PlayerLife _playerLife;
-    [SerializeField] private int batDamage = 10;
+    [SerializeField] private float batDamage = 10;
     [SerializeField] private Ease ease = Ease.InOutCubic;
     void Start()
     {
