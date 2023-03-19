@@ -31,7 +31,7 @@ public class BatMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("player"))
+        if (other.CompareTag("Player"))
             _playerLife.TakeDamage(batDamage);
     }
 }
