@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6623303408441075279}
   - component: {fileID: 6623303408441075264}
   - component: {fileID: 6623303408441075266}
-  - component: {fileID: 6623303408441075278}
   - component: {fileID: 6623303408441075277}
-  - component: {fileID: 5019192350196604881}
+  - component: {fileID: 5341395609223887030}
   m_Layer: 6
   m_Name: bat
   m_TagString: Untagged
@@ -109,29 +108,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6623303408441075278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6623303408441075267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a478905efad0ad146a439fa245dc7c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PointDeplacements:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  speedBat: 1
-  _playerLife: {fileID: 0}
-  batDamage: 10
-  ease: 10
 --- !u!58 &6623303408441075277
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -148,7 +124,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
---- !u!114 &5019192350196604881
+--- !u!114 &5341395609223887030
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,11 +133,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6623303408441075267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1003d103923c5c54da59067ece94e993, type: 3}
+  m_Script: {fileID: 11500000, guid: 199fdb3fd421488459d7662a6d123099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speedMove: 1
-  detectPlayerRange: 4
+  detectPlayerRange: 3
   attackPlayerRange: 1
   attackDamage: 15
   speedAttack: 2

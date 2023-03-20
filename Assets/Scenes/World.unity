@@ -4278,35 +4278,35 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: _playerLife
       value: 
       objectReference: {fileID: 749466840}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[0]
       value: 
       objectReference: {fileID: 1184536016}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[1]
       value: 
       objectReference: {fileID: 2054231623}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[2]
       value: 
       objectReference: {fileID: 235815467}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[3]
       value: 
       objectReference: {fileID: 1209057517}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[4]
       value: 
       objectReference: {fileID: 1703619469}
-    - target: {fileID: 6623303408441075278, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
+    - target: {fileID: 0}
       propertyPath: PointDeplacements.Array.data[5]
       value: 
       objectReference: {fileID: 381441764}

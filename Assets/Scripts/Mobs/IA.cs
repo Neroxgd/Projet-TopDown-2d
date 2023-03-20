@@ -11,10 +11,10 @@ public abstract class IA : MonoBehaviour
     public float attackPlayerRange = 1f;
     public float attackDamage = 15f;
     public float speedAttack = 2f;
-    private bool canAttack;
+    protected bool canAttack;
     private float DistanceBetweenIAandPlayer { get { return Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position); } }
     private Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
-    public LayerMask layerMaskDetectedToNotEnterInCollison, layerMask;
+    public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
     protected enum State
     {
@@ -90,14 +90,6 @@ public abstract class IA : MonoBehaviour
     }
 
     protected abstract IEnumerator AttackPlayer();
-
-    // IEnumerator AttackPlayer()
-    // {
-    //     canAttack = false;
-    //     PlayerStatistic.Instance.transform.GetComponent<PlayerLife>().TakeDamage(attackDamage);
-    //     yield return new WaitForSeconds(speedAttack);
-    //     canAttack = true;
-    // }
 
     private Vector3 GetRandomDirection()
     {
