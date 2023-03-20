@@ -1860,10 +1860,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedMove: 1
-  detectPlayerRange: 3
-  layerMaskDetected:
+  detectPlayerRange: 4
+  layerMaskDetectedToNotEnterInCollison:
     serializedVersion: 2
     m_Bits: 55
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 63
 --- !u!1001 &1338899755
 PrefabInstance:
   m_ObjectHideFlags: 0

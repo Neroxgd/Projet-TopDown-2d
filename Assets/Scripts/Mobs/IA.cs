@@ -8,8 +8,10 @@ public /*abstract*/ class IA : MonoBehaviour
     protected State state;
     public float speedMove = 1f;
     public float detectPlayerRange = 3f;
-    public LayerMask layerMaskDetected;
-    private Vector3 direction;
+    private float DistanceBetweenIAandPlayer { get { return Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position); } }
+    private Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
+    public LayerMask layerMaskDetectedToNotEnterInCollison, layerMask;
+    private Vector3 directionRoaming;
     protected enum State
     {
         Roaming,
@@ -35,19 +37,18 @@ public /*abstract*/ class IA : MonoBehaviour
             default:
             case State.Roaming:
                 Roaming();
-                if (Physics2D.OverlapCircle(transform.position + direction / 2, 0.5f, layerMaskDetected))
+                if (Physics2D.OverlapCircle(transform.position + directionRoaming / 2, 0.5f, layerMaskDetectedToNotEnterInCollison))
                     DOTween.Kill(transform);
-                if (Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position) < detectPlayerRange)
-                {
-                    Ray ray = new Ray(transform.position, PlayerStatistic.Instance.transform.position - transform.position);
-                    if (Physics2D.GetRayIntersection(ray, Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position), layerMaskDetected).collider.CompareTag("Player"))
-                        //erreur de référence, regarder comment utiliser getRayIntersection
+                if (DistanceBetweenIAandPlayer < detectPlayerRange)
+                    if (Physics2D.Raycast(transform.position, DirectionToPlayer, Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position), layerMask).transform.CompareTag("Player"))
+                    {
                         state = State.ChasePlayer;
-                }
+                        DOTween.Kill(transform);
+                    }
 
                 break;
             case State.ChasePlayer:
-                print("jaaa");
+                ChasePlayer();
                 break;
             case State.AttackPlayer:
                 break;
@@ -67,12 +68,17 @@ public /*abstract*/ class IA : MonoBehaviour
 
     private void ChasePlayer()
     {
-
+        if (DistanceBetweenIAandPlayer > detectPlayerRange * 2 || Physics2D.CircleCast(transform.position, 0.2f, DirectionToPlayer, 0.3f, layerMaskDetectedToNotEnterInCollison))
+        {
+            state = State.Roaming;
+            return;
+        }
+        transform.position = Vector3.MoveTowards(transform.position, PlayerStatistic.Instance.transform.position, speedMove * 2 * Time.deltaTime);
     }
 
     private Vector3 GetRandomDirection()
     {
-        direction = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-        return transform.position + direction * Random.Range(2, 8);
+        directionRoaming = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        return transform.position + directionRoaming * Random.Range(2, 8);
     }
 }
