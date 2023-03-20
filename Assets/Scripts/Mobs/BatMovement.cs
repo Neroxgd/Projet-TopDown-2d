@@ -29,9 +29,9 @@ public class BatMovement : MonoBehaviour
             indexDeplacement = 0;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-            _playerLife.TakeDamage(batDamage);
-    }
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //         _playerLife.TakeDamage(batDamage);
+    // }
 }

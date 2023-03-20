@@ -1842,31 +1842,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78e73c673180c448b074d60eaf745bd, type: 3}
---- !u!1 &1246062338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6623303408441075267, guid: 6638c94af51b4e84e8ac78f802c741d1, type: 3}
-  m_PrefabInstance: {fileID: 6623303408082848023}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1246062344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246062338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1003d103923c5c54da59067ece94e993, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedMove: 1
-  detectPlayerRange: 4
-  layerMaskDetectedToNotEnterInCollison:
-    serializedVersion: 2
-    m_Bits: 55
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 63
 --- !u!1001 &1338899755
 PrefabInstance:
   m_ObjectHideFlags: 0

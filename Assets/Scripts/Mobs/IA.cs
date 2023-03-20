@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public /*abstract*/ class IA : MonoBehaviour
+public abstract class IA : MonoBehaviour
 {
     protected State state;
     public float speedMove = 1f;
     public float detectPlayerRange = 3f;
+    public float attackPlayerRange = 1f;
+    public float attackDamage = 15f;
+    public float speedAttack = 2f;
+    private bool canAttack;
     private float DistanceBetweenIAandPlayer { get { return Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position); } }
     private Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
     public LayerMask layerMaskDetectedToNotEnterInCollison, layerMask;
@@ -17,7 +21,6 @@ public /*abstract*/ class IA : MonoBehaviour
         Roaming,
         ChasePlayer,
         AttackPlayer,
-        // ReturnToStart
     }
 
     void Start()
@@ -45,15 +48,30 @@ public /*abstract*/ class IA : MonoBehaviour
                         state = State.ChasePlayer;
                         DOTween.Kill(transform);
                     }
-
                 break;
             case State.ChasePlayer:
+                if (DistanceBetweenIAandPlayer > detectPlayerRange * 2 || Physics2D.CircleCast(transform.position, 0.2f, DirectionToPlayer, 0.3f, layerMaskDetectedToNotEnterInCollison))
+                {
+                    state = State.Roaming;
+                    break;
+                }
+                if (DistanceBetweenIAandPlayer < attackPlayerRange)
+                {
+                    state = State.AttackPlayer;
+                    canAttack = true;
+                    break;
+                }
                 ChasePlayer();
                 break;
             case State.AttackPlayer:
+                if (DistanceBetweenIAandPlayer > attackPlayerRange)
+                {
+                    state = State.ChasePlayer;
+                    break;
+                }
+                if (canAttack)
+                    StartCoroutine(AttackPlayer());
                 break;
-                // case State.ReturnToStart:
-                //     break;
         }
     }
 
@@ -68,13 +86,18 @@ public /*abstract*/ class IA : MonoBehaviour
 
     private void ChasePlayer()
     {
-        if (DistanceBetweenIAandPlayer > detectPlayerRange * 2 || Physics2D.CircleCast(transform.position, 0.2f, DirectionToPlayer, 0.3f, layerMaskDetectedToNotEnterInCollison))
-        {
-            state = State.Roaming;
-            return;
-        }
         transform.position = Vector3.MoveTowards(transform.position, PlayerStatistic.Instance.transform.position, speedMove * 2 * Time.deltaTime);
     }
+
+    protected abstract IEnumerator AttackPlayer();
+
+    // IEnumerator AttackPlayer()
+    // {
+    //     canAttack = false;
+    //     PlayerStatistic.Instance.transform.GetComponent<PlayerLife>().TakeDamage(attackDamage);
+    //     yield return new WaitForSeconds(speedAttack);
+    //     canAttack = true;
+    // }
 
     private Vector3 GetRandomDirection()
     {
