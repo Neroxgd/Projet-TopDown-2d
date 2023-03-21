@@ -16,6 +16,8 @@ public class PlayerLife : MonoBehaviour
     public void TakeDamage(float dmg)
     {
         impulseSource.GenerateImpulseWithForce(shakeForce);
+        if (dmg > 0)
+            dmg = Mathf.Clamp(dmg - PlayerStatistic.Instance.TotalArmor, 1, Mathf.Infinity);
         life.DOFillAmount((PlayerStatistic.Instance.Life - dmg) / 100, 1);
         PlayerStatistic.Instance.Life -= dmg;
         if (dmg >= 0)

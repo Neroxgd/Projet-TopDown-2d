@@ -13,6 +13,12 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
     private float atkSpeed;
     private bool canAttack = true;
+
+    void Start()
+    {
+        PlayerStatistic.Instance.Attack = 5;
+    }
+    
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.started && !uI_Inventory.ShowInventory && canAttack)
@@ -48,5 +54,11 @@ public class PlayerAttack : MonoBehaviour
         yield return new WaitForSeconds(atkSpeed);
         canAttack = true;
         Destroy(atk);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Entity"))
+            other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.Attack;
     }
 }

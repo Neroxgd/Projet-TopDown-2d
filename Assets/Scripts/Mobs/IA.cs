@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public abstract class IA : MonoBehaviour
 {
     protected State state;
+    private float iaCurrentLife;
+    public float iaLife = 100;
     public float speedMove = 1f;
     public float detectPlayerRange = 3f;
     public float attackPlayerRange = 1f;
@@ -16,6 +19,7 @@ public abstract class IA : MonoBehaviour
     private Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
     public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
+    private Image lifeBarre;
     protected enum State
     {
         Roaming,
@@ -23,9 +27,27 @@ public abstract class IA : MonoBehaviour
         AttackPlayer,
     }
 
+    public float IALife
+    {
+        get
+        {
+            return iaCurrentLife;
+        }
+        set
+        {
+            lifeBarre.DOFillAmount(value / iaLife, 0.5f);
+            iaCurrentLife = value;
+            print(iaCurrentLife);
+            if (iaCurrentLife < 1)
+                Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
         state = State.Roaming;
+        iaCurrentLife = iaLife;
+        lifeBarre = GetComponentsInChildren<Image>()[1];
     }
 
     void Update()

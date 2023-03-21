@@ -10,6 +10,7 @@ public class PlayerStatistic : MonoBehaviour
     public int Attack { get; set; }
     public int Armor_Helmet { get; set; }
     public int Armor_Chestplate { get; set; }
+    public int TotalArmor { get { return Armor_Chestplate + Armor_Helmet; } }
     public float MoveSpeed { get; set; }
 
     void Awake() { Instance = this; }
