@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c04ba367d7745e345b8555473b816617, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
-  prefab_UI: {fileID: 4173686599761962551, guid: 72270dd9202e7144ebdc37bd011fea2c, type: 3}
+  prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
   prefab_World: {fileID: 1984650627523828431, guid: 847b40f2fa8ab1342a94c2915df595ed, type: 3}
   type: 3
   description: 
@@ -20,4 +20,3 @@ MonoBehaviour:
   objectCount: 1
   isEquipable: 1
   defPower: 5
-  isTypeEquiped: 0

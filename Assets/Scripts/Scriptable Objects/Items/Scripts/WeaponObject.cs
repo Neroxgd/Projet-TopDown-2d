@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponObject : ItemObject
 {
     public int atkPower;
-    public bool isTypeEquiped;
+    public static bool isTypeEquiped;
     public float weaponSpeed;
 
     public override string TextInv()
@@ -16,6 +16,7 @@ public class WeaponObject : ItemObject
 
     void Awake()
     {
-        type = ItemType.Sword;
+        type = ItemType.Sword1;
+        isTypeEquiped = false;
     }
 }

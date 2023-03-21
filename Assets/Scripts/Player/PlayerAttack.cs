@@ -18,11 +18,15 @@ public class PlayerAttack : MonoBehaviour
     {
         PlayerStatistic.Instance.Attack = 5;
     }
-    
+
     public void Attack(InputAction.CallbackContext context)
     {
         if (context.started && !uI_Inventory.ShowInventory && canAttack)
+        {
+            // if (inventoryObject.Container)
             StartCoroutine(AttackMelee());
+        }
+
     }
 
     IEnumerator AttackMelee()
@@ -34,21 +38,23 @@ public class PlayerAttack : MonoBehaviour
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         atk.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
         // atk.transform.Translate((transform.up) / 2f);
-        for (int i = 0; i <= inventoryObject.Container.Count; i++)
+        if (!WeaponObject.isTypeEquiped)
         {
-            if (i != inventoryObject.Container.Count && inventoryObject.Container[i].isEquiped && inventoryObject.Container[i].item is WeaponObject)
-            {
-                atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = inventoryObject.Container[i].item.prefab_World.GetComponent<SpriteRenderer>().sprite;
-                atkSpeed = ((WeaponObject)inventoryObject.Container[i].item).weaponSpeed;
-                break;
-            }
-            if (i == inventoryObject.Container.Count)
-            {
-                atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = defaultSprite;
-                atkSpeed = atkDefaultWeaponSpeed;
-                atk.transform.localScale /= 1.5f;
-            }
+            atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = defaultSprite;
+            atkSpeed = atkDefaultWeaponSpeed;
+            atk.transform.localScale /= 1.5f;
         }
+        else
+            for (int i = 0; i < inventoryObject.Container.Count; i++)
+            {
+                WeaponObject weaponObject = inventoryObject.Container[i].item as WeaponObject;
+                if (inventoryObject.Container[i].isEquiped && weaponObject != null)
+                {
+                    atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = inventoryObject.Container[i].item.prefab_World.GetComponent<SpriteRenderer>().sprite;
+                    atkSpeed = weaponObject.weaponSpeed;
+                    break;
+                }
+            }
         atk.transform.eulerAngles = new Vector3(atk.transform.eulerAngles.x, atk.transform.eulerAngles.y, atk.transform.eulerAngles.z + -45);
         atk.transform.DORotate(new Vector3(0, 0, 90), atkSpeed, RotateMode.WorldAxisAdd);
         yield return new WaitForSeconds(atkSpeed);

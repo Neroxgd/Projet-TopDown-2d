@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using TMPro;
 
 public class UI_Inventory : MonoBehaviour
@@ -51,14 +52,16 @@ public class UI_Inventory : MonoBehaviour
                 {
                     if (inventory.Container.Count > instantiatCount)
                     {
-                        Instantiate(itemObject.prefab_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+                        GameObject itemUI = Instantiate(itemObject.prefabItem_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+                        itemUI.GetComponent<Image>().sprite = itemObject.prefab_World.GetComponent<SpriteRenderer>().sprite;
                         instantiatCount++;
                     }
                     InstantiatHere.GetChild(i).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString();
                     return;
                 }
             }
-        GameObject itemInstantiat = Instantiate(itemObject.prefab_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+        GameObject itemInstantiat = Instantiate(itemObject.prefabItem_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
+        itemInstantiat.GetComponent<Image>().sprite = itemObject.prefab_World.GetComponent<SpriteRenderer>().sprite;
         instantiatCount++;
         // ui_InventoryObjectInstantiat.Add(itemInstantiat);
         itemInstantiat.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";

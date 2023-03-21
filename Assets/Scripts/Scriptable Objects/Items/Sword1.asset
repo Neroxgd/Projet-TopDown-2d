@@ -9,14 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cd03489548e8b44c82f86a1f1bc5dd8, type: 3}
-  m_Name: Chestplate
+  m_Script: {fileID: 11500000, guid: e485223862fe540498fe5ca37759444c, type: 3}
+  m_Name: Sword1
   m_EditorClassIdentifier: 
   prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
-  prefab_World: {fileID: 1984650627523828431, guid: 457d13bfd17bf1940bcdb2879a6ca562, type: 3}
-  type: 4
-  description: 
+  prefab_World: {fileID: 1984650627523828431, guid: eb5ddd054e69b2e43a608c6babc615e2, type: 3}
+  type: 0
+  description: jeee
   isStackable: 0
   objectCount: 1
   isEquipable: 1
-  defPower: 8
+  atkPower: 12
+  weaponSpeed: 0.5

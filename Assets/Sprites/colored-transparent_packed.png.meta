@@ -101,6 +101,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -7980,7 +7992,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_375
+      name: Sword2
       rect:
         serializedVersion: 2
         x: 528
@@ -22799,11 +22811,11 @@ TextureImporter:
       colored-transparent_packed_133: 1340965136
       colored-transparent_packed_561: 733796752
       colored-transparent_packed_815: -2118061788
-      colored-transparent_packed_462: 1621010709
+      colored-transparent_packed_372: -1705346049
       colored-transparent_packed_615: 2032890570
       colored-transparent_packed_488: -633174795
+      colored-transparent_packed_462: 1621010709
       colored-transparent_packed_985: 1134980926
-      colored-transparent_packed_372: -1705346049
       colored-transparent_packed_641: -587976309
       colored-transparent_packed_471: 484889912
       colored-transparent_packed_253: 1507047728
@@ -23002,8 +23014,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23128,7 +23140,6 @@ TextureImporter:
       colored-transparent_packed_464: 407525074
       colored-transparent_packed_503: 1845839714
       colored-transparent_packed_721: -1362182538
-      colored-transparent_packed_375: 1071563820
       colored-transparent_packed_419: -265733382
       colored-transparent_packed_855: 514450695
       colored-transparent_packed_681: 1777539573
@@ -23777,6 +23788,7 @@ TextureImporter:
       colored-transparent_packed_522: 602268019
       colored-transparent_packed_21: 1656686020
       colored-transparent_packed_214: 63331344
+      Sword2: 1071563820
       colored-transparent_packed_335: -2135096235
       colored-transparent_packed_666: 1446491410
       colored-transparent_packed_492: -24857284

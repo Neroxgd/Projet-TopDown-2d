@@ -7,7 +7,7 @@ public class LightObject : ItemObject
 {
     public int radiusLight;
     public bool isEquiped;
-    public bool isTypeEquiped;
+    public static bool isTypeEquiped;
 
     public override string TextInv()
     {
@@ -16,5 +16,6 @@ public class LightObject : ItemObject
     void Awake()
     {
         type = ItemType.Torch;
+        isTypeEquiped = false;
     }
 }

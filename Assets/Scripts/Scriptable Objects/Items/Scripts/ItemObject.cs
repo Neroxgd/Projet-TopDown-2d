@@ -4,7 +4,8 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Sword,
+    Sword1,
+    Sword2,
     HealtPotion,
     Torch,
     Helmet,
@@ -13,7 +14,7 @@ public enum ItemType
 
 public abstract class ItemObject : ScriptableObject
 {
-    public GameObject prefab_UI;
+    public GameObject prefabItem_UI;
     public GameObject prefab_World;
     public ItemType type;
     [TextArea(15, 20)] public string description;

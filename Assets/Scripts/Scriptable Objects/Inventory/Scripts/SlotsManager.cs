@@ -35,15 +35,6 @@ public class SlotsManager : MonoBehaviour
             LightObject lightObject = inventory.Container[IndexButton].item as LightObject;
             Armor_HelmetObject helmetObject = inventory.Container[IndexButton].item as Armor_HelmetObject;
             Armor_ChestplateObject chestplateObject = inventory.Container[IndexButton].item as Armor_ChestplateObject;
-            ItemObject globalObject = null;
-            if (weaponObject != null)
-                globalObject = weaponObject;
-            else if (lightObject != null)
-                globalObject = lightObject;
-            else if (helmetObject != null)
-                globalObject = helmetObject;
-            else if (chestplateObject)
-                globalObject = chestplateObject;
             //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
@@ -53,10 +44,10 @@ public class SlotsManager : MonoBehaviour
                     PlayerStatistic.Instance.Armor_Helmet = helmetObject.defPower;
                 else if (chestplateObject != null)
                     PlayerStatistic.Instance.Armor_Chestplate = chestplateObject.defPower;
-                if ((weaponObject != null && weaponObject.isTypeEquiped) || (lightObject != null && lightObject.isTypeEquiped) || (helmetObject != null && helmetObject.isTypeEquiped) || (chestplateObject != null && chestplateObject.isTypeEquiped)/* || add all cast*/)
+                if ((weaponObject != null && WeaponObject.isTypeEquiped) || (lightObject != null && LightObject.isTypeEquiped) || (helmetObject != null && Armor_HelmetObject.isTypeEquiped) || (chestplateObject != null && Armor_ChestplateObject.isTypeEquiped)/* || add all cast*/)
                     for (int i = 0; i < inventory.Container.Count; i++)
                     {
-                        if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton] && globalObject == inventory.Container[i].item)
+                        if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton] && inventory.Container[i].item.GetType() == inventory.Container[IndexButton].item.GetType())
                         {
                             inventory.Container[i].isEquiped = false;
                             transform.GetChild(i).GetComponent<Image>().color = Color.white;
@@ -64,13 +55,13 @@ public class SlotsManager : MonoBehaviour
                         }
                     }
                 if (weaponObject != null)
-                    weaponObject.isTypeEquiped = true;
+                    WeaponObject.isTypeEquiped = true;
                 else if (lightObject != null)
-                    lightObject.isTypeEquiped = true;
+                    LightObject.isTypeEquiped = true;
                 else if (helmetObject != null)
-                    helmetObject.isTypeEquiped = true;
+                    Armor_HelmetObject.isTypeEquiped = true;
                 else if (chestplateObject != null)
-                    chestplateObject.isTypeEquiped = true;
+                    Armor_ChestplateObject.isTypeEquiped = true;
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
             }
@@ -79,19 +70,19 @@ public class SlotsManager : MonoBehaviour
                 if (weaponObject != null)
                 {
                     PlayerStatistic.Instance.Attack = 5;
-                    weaponObject.isTypeEquiped = false;
+                    WeaponObject.isTypeEquiped = false;
                 }
                 else if (lightObject != null)
-                    lightObject.isTypeEquiped = false;
+                    LightObject.isTypeEquiped = false;
                 else if (helmetObject != null)
                 {
                     PlayerStatistic.Instance.Armor_Helmet = 0;
-                    helmetObject.isTypeEquiped = false;
+                    Armor_HelmetObject.isTypeEquiped = false;
                 }
                 else if (chestplateObject != null)
                 {
                     PlayerStatistic.Instance.Armor_Chestplate = 0;
-                    chestplateObject.isTypeEquiped = false;
+                    Armor_ChestplateObject.isTypeEquiped = false;
                 }
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
                 inventory.Container[IndexButton].isEquiped = false;

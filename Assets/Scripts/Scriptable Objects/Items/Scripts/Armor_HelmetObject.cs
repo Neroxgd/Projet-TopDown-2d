@@ -6,7 +6,7 @@ using UnityEngine;
 public class Armor_HelmetObject : ItemObject
 {
     public int defPower;
-    public bool isTypeEquiped;
+    public static bool isTypeEquiped;
 
     public override string TextInv()
     {
@@ -16,5 +16,6 @@ public class Armor_HelmetObject : ItemObject
     void Awake()
     {
         type = ItemType.Helmet;
+        isTypeEquiped = false;
     }
 }

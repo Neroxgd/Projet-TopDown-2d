@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e485223862fe540498fe5ca37759444c, type: 3}
-  m_Name: Sword
+  m_Name: Sword2
   m_EditorClassIdentifier: 
-  prefab_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
-  prefab_World: {fileID: 1984650627523828431, guid: eb5ddd054e69b2e43a608c6babc615e2, type: 3}
-  type: 0
-  description: 
+  prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
+  prefab_World: {fileID: 1984650627523828431, guid: 099b3248918f2ac40b193dbd686c118b, type: 3}
+  type: 1
+  description: tuuu
   isStackable: 0
   objectCount: 1
   isEquipable: 1
-  atkPower: 12
-  isTypeEquiped: 1
-  weaponSpeed: 0.5
+  atkPower: 16
+  weaponSpeed: 0.4
