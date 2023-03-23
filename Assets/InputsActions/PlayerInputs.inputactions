@@ -42,9 +42,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Attack",
+                    "name": "AttackMelee",
                     "type": "Button",
                     "id": "98618824-7d17-4546-9988-48fac8515569",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack Distance",
+                    "type": "Button",
+                    "id": "242b88e9-2640-488d-aadf-9eaa1f4f277a",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -202,7 +211,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Attack",
+                    "action": "AttackMelee",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9daa6e7d-f8b2-4e74-8ee9-1c5cc9c5c1b6",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack Distance",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -8,7 +8,8 @@ public class WeaponDistance : ItemObject
     public int atkPower;
     public static bool isTypeEquiped;
     public float weaponSpeed;
-    public bool ammoORmana; 
+    public bool ammo; 
+    public float manaConsumed;
 
     public override string TextInv()
     {

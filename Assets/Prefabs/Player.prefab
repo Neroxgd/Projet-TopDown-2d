@@ -205,9 +205,9 @@ MonoBehaviour:
     m_ActionName: Player/Equipe_Item[/Keyboard/y]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2100575368166111226}
         m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
-        m_MethodName: Attack
+        m_MethodName: InputAttackMelee
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -219,6 +219,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 98618824-7d17-4546-9988-48fac8515569
     m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2100575368166111226}
+        m_TargetAssemblyTypeName: PlayerAttack, Assembly-CSharp
+        m_MethodName: InputAttackDistance
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 242b88e9-2640-488d-aadf-9eaa1f4f277a
+    m_ActionName: Player/Attack Distance[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -363,7 +379,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI_Inventory: {fileID: 0}
-  prefabAtk: {fileID: 2585694542484511278, guid: 1ae6a689b18010b449ce309a9f4f6544, type: 3}
+  prefabAtkMelee: {fileID: 2585694542484511278, guid: 1ae6a689b18010b449ce309a9f4f6544, type: 3}
+  prefabAtkDistance: {fileID: 2585694542484511278, guid: 261d04c5c4a6c0e41b3e9e98e815c09a, type: 3}
   defaultSprite: {fileID: -1716252731, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
   inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
   atkDefaultWeaponSpeed: 0.5
