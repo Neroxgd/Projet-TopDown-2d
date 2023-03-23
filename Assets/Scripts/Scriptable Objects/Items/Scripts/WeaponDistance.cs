@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Weapon Object", menuName = "Inventory System/Items/Weapon")]
-public class WeaponObject : ItemObject
+[CreateAssetMenu(fileName = "New Weapon Distance", menuName = "Inventory System/Items/Weapon_Distance")]
+public class WeaponDistance : ItemObject
 {
     public int atkPower;
     public static bool isTypeEquiped;
     public float weaponSpeed;
+    public bool ammoORmana; 
 
     public override string TextInv()
     {
@@ -16,7 +17,7 @@ public class WeaponObject : ItemObject
 
     void Awake()
     {
-        type = ItemType.Sword1;
+        type = ItemType.Bow1;
         isTypeEquiped = false;
     }
 }

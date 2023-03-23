@@ -7047,7 +7047,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_330
+      name: bow1
       rect:
         serializedVersion: 2
         x: 592
@@ -23002,7 +23002,6 @@ TextureImporter:
       colored-transparent_packed_891: 1666191395
       colored-transparent_packed_1051: -856322312
       colored-transparent_packed_991: -1669680712
-      colored-transparent_packed_330: 550353900
       colored-transparent_packed_831: -1466823703
       colored-transparent_packed_199: 2004917491
       colored-transparent_packed_1008: 873077189
@@ -23014,8 +23013,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23362,6 +23361,7 @@ TextureImporter:
       colored-transparent_packed_556: 1770907822
       colored-transparent_packed_239: -1082620073
       colored-transparent_packed_505: -1025478932
+      bow1: 550353900
       colored-transparent_packed_502: 1137586750
       colored-transparent_packed_588: 323050372
       colored-transparent_packed_819: 306061381

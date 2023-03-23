@@ -6,6 +6,7 @@ public enum ItemType
 {
     Sword1,
     Sword2,
+    Bow1,
     HealtPotion,
     Torch,
     Helmet,

@@ -38,7 +38,7 @@ public class PlayerAttack : MonoBehaviour
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         atk.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
         // atk.transform.Translate((transform.up) / 2f);
-        if (!WeaponObject.isTypeEquiped)
+        if (!WeaponMelee.isTypeEquiped)
         {
             atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = defaultSprite;
             atkSpeed = atkDefaultWeaponSpeed;
@@ -47,11 +47,11 @@ public class PlayerAttack : MonoBehaviour
         else
             for (int i = 0; i < inventoryObject.Container.Count; i++)
             {
-                WeaponObject weaponObject = inventoryObject.Container[i].item as WeaponObject;
-                if (inventoryObject.Container[i].isEquiped && weaponObject != null)
+                WeaponMelee weaponMelee = inventoryObject.Container[i].item as WeaponMelee;
+                if (inventoryObject.Container[i].isEquiped && weaponMelee != null)
                 {
                     atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = inventoryObject.Container[i].item.prefab_World.GetComponent<SpriteRenderer>().sprite;
-                    atkSpeed = weaponObject.weaponSpeed;
+                    atkSpeed = weaponMelee.weaponSpeed;
                     break;
                 }
             }

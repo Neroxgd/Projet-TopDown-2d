@@ -31,20 +31,23 @@ public class SlotsManager : MonoBehaviour
     {
         if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item.isEquipable)
         {
-            WeaponObject weaponObject = inventory.Container[IndexButton].item as WeaponObject;
+            WeaponMelee weaponMelee = inventory.Container[IndexButton].item as WeaponMelee;
             LightObject lightObject = inventory.Container[IndexButton].item as LightObject;
             Armor_HelmetObject helmetObject = inventory.Container[IndexButton].item as Armor_HelmetObject;
             Armor_ChestplateObject chestplateObject = inventory.Container[IndexButton].item as Armor_ChestplateObject;
+            WeaponDistance weaponDistance = inventory.Container[IndexButton].item as WeaponDistance;
             //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
-                if (weaponObject != null)
-                    PlayerStatistic.Instance.Attack = weaponObject.atkPower;
+                if (weaponMelee != null)
+                    PlayerStatistic.Instance.Attack = weaponMelee.atkPower;
+                else if (weaponDistance != null)
+                    PlayerStatistic.Instance.Attack = weaponDistance.atkPower;
                 else if (helmetObject != null)
                     PlayerStatistic.Instance.Armor_Helmet = helmetObject.defPower;
                 else if (chestplateObject != null)
                     PlayerStatistic.Instance.Armor_Chestplate = chestplateObject.defPower;
-                if ((weaponObject != null && WeaponObject.isTypeEquiped) || (lightObject != null && LightObject.isTypeEquiped) || (helmetObject != null && Armor_HelmetObject.isTypeEquiped) || (chestplateObject != null && Armor_ChestplateObject.isTypeEquiped)/* || add all cast*/)
+                if ((weaponMelee != null && WeaponMelee.isTypeEquiped) || (lightObject != null && LightObject.isTypeEquiped) || (helmetObject != null && Armor_HelmetObject.isTypeEquiped) || (chestplateObject != null && Armor_ChestplateObject.isTypeEquiped) || (weaponDistance != null && WeaponDistance.isTypeEquiped)/* || add all cast*/)
                     for (int i = 0; i < inventory.Container.Count; i++)
                     {
                         if (inventory.Container[i].isEquiped && inventory.Container[i] != inventory.Container[IndexButton] && inventory.Container[i].item.GetType() == inventory.Container[IndexButton].item.GetType())
@@ -54,8 +57,10 @@ public class SlotsManager : MonoBehaviour
                             break;
                         }
                     }
-                if (weaponObject != null)
-                    WeaponObject.isTypeEquiped = true;
+                if (weaponMelee != null)
+                    WeaponMelee.isTypeEquiped = true;
+                else if (weaponDistance != null)
+                    WeaponDistance.isTypeEquiped = true;
                 else if (lightObject != null)
                     LightObject.isTypeEquiped = true;
                 else if (helmetObject != null)
@@ -67,10 +72,15 @@ public class SlotsManager : MonoBehaviour
             }
             else
             {
-                if (weaponObject != null)
+                if (weaponMelee != null)
                 {
                     PlayerStatistic.Instance.Attack = 5;
-                    WeaponObject.isTypeEquiped = false;
+                    WeaponMelee.isTypeEquiped = false;
+                }
+                else if (weaponDistance != null)
+                {
+                    PlayerStatistic.Instance.Attack = 5;
+                    WeaponDistance.isTypeEquiped = false;
                 }
                 else if (lightObject != null)
                     LightObject.isTypeEquiped = false;
