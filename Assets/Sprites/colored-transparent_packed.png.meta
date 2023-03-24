@@ -11184,7 +11184,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_527
+      name: cursor
       rect:
         serializedVersion: 2
         x: 608
@@ -22749,7 +22749,6 @@ TextureImporter:
       colored-transparent_packed_108: -877218267
       colored-transparent_packed_850: 1223457423
       colored-transparent_packed_872: 1337399439
-      colored-transparent_packed_527: 166714018
       colored-transparent_packed_830: -1245688578
       colored-transparent_packed_195: 1336798124
       colored-transparent_packed_635: -558642657
@@ -22793,6 +22792,7 @@ TextureImporter:
       colored-transparent_packed_473: 980950692
       colored-transparent_packed_686: -449574344
       colored-transparent_packed_309: -1261666283
+      cursor: 166714018
       colored-transparent_packed_359: 343239163
       colored-transparent_packed_497: 601998629
       inventory12: 564642222
@@ -23014,8 +23014,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23036,14 +23036,14 @@ TextureImporter:
       colored-transparent_packed_691: 208643782
       colored-transparent_packed_989: -1886151729
       colored-transparent_packed_29: -1437549492
-      colored-transparent_packed_1071: 774303721
-      colored-transparent_packed_888: 1468983150
       colored-transparent_packed_897: -1174119748
+      colored-transparent_packed_888: 1468983150
       colored-transparent_packed_834: 1198371015
       colored-transparent_packed_554: 2125022538
       colored-transparent_packed_614: -1536939037
       colored-transparent_packed_16: 1407252622
       colored-transparent_packed_880: -1842746988
+      colored-transparent_packed_1071: 774303721
       colored-transparent_packed_157: -1857408808
       colored-transparent_packed_167: 1382092564
       colored-transparent_packed_1028: -222043786
