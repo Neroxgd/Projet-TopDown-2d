@@ -3306,6 +3306,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2100575368166111226, guid: 0272342f7e90e1848a5117dbacabf493, type: 3}
+      propertyPath: speedAmmo
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2100575368166111226, guid: 0272342f7e90e1848a5117dbacabf493, type: 3}
       propertyPath: uI_Inventory
       value: 
       objectReference: {fileID: 1698024181}

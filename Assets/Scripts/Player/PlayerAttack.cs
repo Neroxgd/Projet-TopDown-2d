@@ -7,10 +7,11 @@ using DG.Tweening;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private UI_Inventory uI_Inventory;
-    [SerializeField] private GameObject prefabAtkMelee, prefabAtkDistance;
+    [SerializeField] private GameObject prefabAtkMelee, prefabAtkDistance, prefabAmmo;
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private InventoryObject inventoryObject;
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
+    [SerializeField] private float speedAmmo = 2f;
     private float atkSpeed;
     private bool canAttack = true;
 
@@ -82,6 +83,11 @@ public class PlayerAttack : MonoBehaviour
                 break;
             }
         }
+        GameObject ammo = Instantiate(prefabAmmo, transform.position, atk.transform.rotation, transform);
+        ammo.transform.DOMove(ammo.transform.position + ammo.transform.up * 50, speedAmmo)
+        .SetSpeedBased(true)
+        .SetEase(Ease.Linear)
+        .OnComplete(() => Destroy(ammo));
         yield return new WaitForSeconds(atkSpeed);
         canAttack = true;
         Destroy(atk);
