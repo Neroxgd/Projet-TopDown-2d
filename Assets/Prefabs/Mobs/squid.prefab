@@ -113,9 +113,9 @@ GameObject:
   - component: {fileID: 6623303408441075264}
   - component: {fileID: 6623303408441075266}
   - component: {fileID: 6623303408441075277}
-  - component: {fileID: 5341395609223887030}
+  - component: {fileID: 7846782131987270637}
   m_Layer: 6
-  m_Name: bat
+  m_Name: squid
   m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,8 +178,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 879226935, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
-  m_Color: {r: 1, g: 0, b: 0.9496021, a: 1}
+  m_Sprite: {fileID: -1206541232, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
+  m_Color: {r: 1, g: 0, b: 0.63282204, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -226,7 +226,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
---- !u!114 &5341395609223887030
+--- !u!114 &7846782131987270637
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,21 +235,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 6623303408441075267}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 199fdb3fd421488459d7662a6d123099, type: 3}
+  m_Script: {fileID: 11500000, guid: b0043fa3b530ec245aa396a1c0276d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   iaLife: 100
   speedMove: 1
-  detectPlayerRange: 3
-  attackPlayerRange: 1
+  detectPlayerRange: 8
+  attackPlayerRange: 6
   attackDamage: 15
-  speedAttack: 2
+  speedAttack: 3
   layerMaskDetectedToNotEnterInCollison:
     serializedVersion: 2
     m_Bits: 55
   layerMask:
     serializedVersion: 2
     m_Bits: 63
+  projectil: {fileID: 2585694542484511278, guid: 2fd764cabadf6fd4aaa6f932b27ed706, type: 3}
+  speedProjectil: 5
 --- !u!1001 &8180941025439627619
 PrefabInstance:
   m_ObjectHideFlags: 0

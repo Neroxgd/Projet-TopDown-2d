@@ -5,7 +5,7 @@ public class Ammo : MonoBehaviour
 {
     void Start()
     {
-        Physics2D.IgnoreCollision(transform.GetComponentInChildren<Collider2D>(), transform.parent.GetComponent<Collider2D>());
+        Physics2D.IgnoreCollision(transform.GetComponentInChildren<Collider2D>(), GetComponentInParent<Collider2D>());
     }
 
     void OnTriggerEnter2D(Collider2D other)

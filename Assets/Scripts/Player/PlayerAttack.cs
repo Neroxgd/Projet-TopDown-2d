@@ -36,11 +36,7 @@ public class PlayerAttack : MonoBehaviour
     {
         canAttack = false;
         GameObject atk = Instantiate(prefabAtkMelee, transform.position, Quaternion.identity, transform);
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
-        diff.Normalize();
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        atk.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
-        // atk.transform.Translate((transform.up) / 2f);
+        atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
         if (WeaponMelee.isTypeEquiped)
             for (int i = 0; i < inventoryObject.Container.Count; i++)
             {
@@ -69,10 +65,7 @@ public class PlayerAttack : MonoBehaviour
     {
         canAttack = false;
         GameObject atk = Instantiate(prefabAtkDistance, transform.position, Quaternion.identity, transform);
-        Vector3 diff = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position;
-        diff.Normalize();
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        atk.transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
         for (int i = 0; i < inventoryObject.Container.Count; i++)
         {
             WeaponDistance weaponDistance = inventoryObject.Container[i].item as WeaponDistance;

@@ -16,7 +16,7 @@ public abstract class IA : MonoBehaviour
     public float speedAttack = 2f;
     protected bool canAttack;
     private float DistanceBetweenIAandPlayer { get { return Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position); } }
-    private Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
+    protected Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
     public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
     private Image lifeBarre;
@@ -48,6 +48,7 @@ public abstract class IA : MonoBehaviour
         state = State.Roaming;
         iaCurrentLife = iaLife;
         lifeBarre = GetComponentsInChildren<Image>()[1];
+        canAttack = true;
     }
 
     void Update()
@@ -80,7 +81,6 @@ public abstract class IA : MonoBehaviour
                 if (DistanceBetweenIAandPlayer < attackPlayerRange)
                 {
                     state = State.AttackPlayer;
-                    canAttack = true;
                     break;
                 }
                 ChasePlayer();
@@ -92,7 +92,11 @@ public abstract class IA : MonoBehaviour
                     break;
                 }
                 if (canAttack)
+                {
+                    canAttack = false;
                     StartCoroutine(AttackPlayer());
+                }
+                    
                 break;
         }
     }
