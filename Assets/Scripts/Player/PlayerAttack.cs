@@ -13,7 +13,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
     [SerializeField] private float speedAmmo = 2f;
     private float atkSpeed;
-    private bool canAttack = true;
+    public bool CanAttack { get; private set; } = true;
 
     void Start()
     {
@@ -22,19 +22,19 @@ public class PlayerAttack : MonoBehaviour
 
     public void InputAttackMelee(InputAction.CallbackContext context)
     {
-        if (context.started && !uI_Inventory.ShowInventory && canAttack)
+        if (context.started && !uI_Inventory.ShowInventory && CanAttack)
             StartCoroutine(AttackMelee());
     }
 
     public void InputAttackDistance(InputAction.CallbackContext context)
     {
-        if (context.started && !uI_Inventory.ShowInventory && canAttack && WeaponDistance.isTypeEquiped)
+        if (context.started && !uI_Inventory.ShowInventory && CanAttack && WeaponDistance.isTypeEquiped)
             StartCoroutine(AttackDistance());
     }
 
     IEnumerator AttackMelee()
     {
-        canAttack = false;
+        CanAttack = false;
         GameObject atk = Instantiate(prefabAtkMelee, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
         if (WeaponMelee.isTypeEquiped)
@@ -57,13 +57,13 @@ public class PlayerAttack : MonoBehaviour
         atk.transform.eulerAngles = new Vector3(atk.transform.eulerAngles.x, atk.transform.eulerAngles.y, atk.transform.eulerAngles.z + -45);
         atk.transform.DORotate(new Vector3(0, 0, 90), atkSpeed, RotateMode.WorldAxisAdd);
         yield return new WaitForSeconds(atkSpeed);
-        canAttack = true;
+        CanAttack = true;
         Destroy(atk);
     }
 
     IEnumerator AttackDistance()
     {
-        canAttack = false;
+        CanAttack = false;
         GameObject atk = Instantiate(prefabAtkDistance, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
         for (int i = 0; i < inventoryObject.Container.Count; i++)
@@ -82,7 +82,7 @@ public class PlayerAttack : MonoBehaviour
         .SetEase(Ease.Linear)
         .OnComplete(() => Destroy(ammo));
         yield return new WaitForSeconds(atkSpeed);
-        canAttack = true;
+        CanAttack = true;
         Destroy(atk);
     }
 

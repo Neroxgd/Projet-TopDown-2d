@@ -6,6 +6,7 @@ TagManager:
   tags:
   - slot
   - Entity
+  - Ammo
   layers:
   - Default
   - TransparentFX

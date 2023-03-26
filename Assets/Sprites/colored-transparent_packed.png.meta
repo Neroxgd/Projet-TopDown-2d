@@ -5157,7 +5157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_240
+      name: jar
       rect:
         serializedVersion: 2
         x: 720
@@ -22941,6 +22941,7 @@ TextureImporter:
       colored-transparent_packed_292: -1012373953
       colored-transparent_packed_176: -299276560
       colored-transparent_packed_45: 1613483435
+      jar: -1825113408
       colored-transparent_packed_869: 1477556613
       colored-transparent_packed_1013: -1632079135
       colored-transparent_packed_310: 1860996753
@@ -23013,8 +23014,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23808,7 +23809,6 @@ TextureImporter:
       colored-transparent_packed_201: 1967998537
       colored-transparent_packed_917: 1467430903
       colored-transparent_packed_722: -122898097
-      colored-transparent_packed_240: -1825113408
       colored-transparent_packed_1007: 2145141593
       colored-transparent_packed_848: 1957312411
       colored-transparent_packed_921: 2071889929
