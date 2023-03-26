@@ -7,7 +7,7 @@ public enum ItemType
     Sword1,
     Sword2,
     Bow1,
-    HealtPotion,
+    HealthPotion,
     Torch,
     Helmet,
     Chestplate,
@@ -22,6 +22,7 @@ public abstract class ItemObject : ScriptableObject
     public bool isStackable;
     public int objectCount;
     public bool isEquipable;
+    public bool isConsumable;
 
     public abstract string TextInv();
 }

@@ -54,6 +54,7 @@ public class UI_Inventory : MonoBehaviour
                     {
                         GameObject itemUI = Instantiate(itemObject.prefabItem_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
                         itemUI.GetComponent<Image>().sprite = itemObject.prefab_World.GetComponent<SpriteRenderer>().sprite;
+                        itemUI.GetComponent<Image>().color = itemObject.prefab_World.GetComponent<SpriteRenderer>().color;
                         instantiatCount++;
                     }
                     InstantiatHere.GetChild(i).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString();
@@ -62,6 +63,7 @@ public class UI_Inventory : MonoBehaviour
             }
         GameObject itemInstantiat = Instantiate(itemObject.prefabItem_UI, InstantiatHere.GetChild(instantiatCount).position, Quaternion.identity, InstantiatHere.GetChild(instantiatCount));
         itemInstantiat.GetComponent<Image>().sprite = itemObject.prefab_World.GetComponent<SpriteRenderer>().sprite;
+        itemInstantiat.GetComponent<Image>().color = itemObject.prefab_World.GetComponent<SpriteRenderer>().color;
         instantiatCount++;
         // ui_InventoryObjectInstantiat.Add(itemInstantiat);
         itemInstantiat.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = "1";

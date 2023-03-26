@@ -12297,7 +12297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_580
+      name: big_potion
       rect:
         serializedVersion: 2
         x: 672
@@ -14166,7 +14166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_669
+      name: health_potion
       rect:
         serializedVersion: 2
         x: 528
@@ -23063,7 +23063,7 @@ TextureImporter:
       colored-transparent_packed_110: 64452254
       colored-transparent_packed_204: 1652396350
       colored-transparent_packed_569: 1093819371
-      colored-transparent_packed_669: 737358301
+      colored-transparent_packed_875: -631368360
       colored-transparent_packed_256: -557039479
       colored-transparent_packed_600: -962680481
       colored-transparent_packed_645: -1772980819
@@ -23075,7 +23075,6 @@ TextureImporter:
       colored-transparent_packed_162: -1078344894
       colored-transparent_packed_938: -2091626421
       colored-transparent_packed_878: -1828573759
-      colored-transparent_packed_875: -631368360
       colored-transparent_packed_958: -223737933
       colored-transparent_packed_350: -231218044
       colored-transparent_packed_708: -2034332743
@@ -23177,6 +23176,7 @@ TextureImporter:
       colored-transparent_packed_63: -1762651755
       colored-transparent_packed_1006: 491152109
       colored-transparent_packed_657: -1423825951
+      health_potion: 737358301
       colored-transparent_packed_336: 794468732
       colored-transparent_packed_247: 1046673193
       colored-transparent_packed_711: -818928376
@@ -23395,18 +23395,18 @@ TextureImporter:
       colored-transparent_packed_651: 1901660839
       colored-transparent_packed_257: -542268032
       colored-transparent_packed_777: 845849780
-      colored-transparent_packed_814: -2096194554
+      squid: -1206541232
       colored-transparent_packed_806: -728952083
       colored-transparent_packed_235: 154772083
       colored-transparent_packed_924: 1037005177
       colored-transparent_packed_608: 1487580570
+      colored-transparent_packed_814: -2096194554
       colored-transparent_packed_911: -2036318672
       colored-transparent_packed_61: 157495144
       colored-transparent_packed_589: -2091115603
       colored-transparent_packed_1032: 1020023882
       colored-transparent_packed_990: 1550053607
       colored-transparent_packed_1018: 1949970809
-      squid: -1206541232
       colored-transparent_packed_1062: 603008697
       colored-transparent_packed_695: -486527775
       colored-transparent_packed_972: 1866133316
@@ -23575,13 +23575,13 @@ TextureImporter:
       colored-transparent_packed_428: 174744815
       colored-transparent_packed_749: -540812786
       colored-transparent_packed_694: -2092564057
+      big_potion: -305440907
       colored-transparent_packed_950: 145855952
       colored-transparent_packed_1050: 1821075998
       colored-transparent_packed_12: -1095098794
       colored-transparent_packed_328: 1911073217
       colored-transparent_packed_327: 1060977741
       colored-transparent_packed_701: 1923804747
-      colored-transparent_packed_580: -305440907
       colored-transparent_packed_237: -1428810560
       colored-transparent_packed_501: -35955851
       colored-transparent_packed_200: 2132585527

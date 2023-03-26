@@ -2,10 +2,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using DG.Tweening;
 
 public class SlotsManager : MonoBehaviour
 {
     public InventoryObject inventory;
+    [SerializeField] private TextMeshProUGUI warningMessage;
     public UI_Inventory uI_Inventory;
     public GameObject prefabSlot;
     public Transform world;
@@ -17,7 +19,18 @@ public class SlotsManager : MonoBehaviour
     {
         if (IndexButton > -1 && context.started)
         {
+            if (inventory.Container[IndexButton].isEquiped)
+            {
+                AlertMessage("you can't drop it while it's equipped");
+                return;
+            }
             Instantiate(inventory.Container[IndexButton].item.prefab_World, PlayerStatistic.Instance.transform.position - Vector3.down, Quaternion.identity, world);
+            if (inventory.Container[IndexButton].amount > 1)
+            {
+                inventory.Container[IndexButton].amount--;
+                uI_Inventory.UpdateInventory(inventory.Container[IndexButton].item);
+                return;
+            }
             Destroy(transform.GetChild(IndexButton).gameObject);
             Instantiate(prefabSlot, Vector3.zero, Quaternion.identity, transform);
             inventory.Container.RemoveAt(IndexButton);
@@ -101,6 +114,28 @@ public class SlotsManager : MonoBehaviour
         }
     }
 
+    public void ConsumeItem(InputAction.CallbackContext context)
+    {
+        if (IndexButton > -1 && context.started && inventory.Container[IndexButton].item.isConsumable)
+        {
+            HealthPotionObject healthPotionObject = inventory.Container[IndexButton].item as HealthPotionObject;
+            if (healthPotionObject != null)
+                PlayerStatistic.Instance.transform.GetComponent<PlayerLife>().TakeDamage(-healthPotionObject.health);
+            if (inventory.Container[IndexButton].amount > 1)
+            {
+                inventory.Container[IndexButton].amount--;
+                uI_Inventory.UpdateInventory(inventory.Container[IndexButton].item);
+                return;
+            }
+            Destroy(transform.GetChild(IndexButton).gameObject);
+            Instantiate(prefabSlot, Vector3.zero, Quaternion.identity, transform);
+            inventory.Container.RemoveAt(IndexButton);
+            IndexButton = -1;
+            Desappears();
+            uI_Inventory.InstantiatCount--;
+        }
+    }
+
     public void Desappears()
     {
         textItem.text = "";
@@ -115,5 +150,12 @@ public class SlotsManager : MonoBehaviour
     {
         textStatsATK.text = "atk : " + PlayerStatistic.Instance.Attack.ToString();
         textStatsDEF.text = "def : " + PlayerStatistic.Instance.TotalArmor.ToString();
+    }
+
+    public void AlertMessage(string message)
+    {
+        warningMessage.alpha = 1;
+        warningMessage.text = message;
+        warningMessage.DOFade(0, 5).OnComplete(() => warningMessage.text = "");
     }
 }

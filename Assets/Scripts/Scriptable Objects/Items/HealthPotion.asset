@@ -9,16 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447625d0047c2b249bfc79394a6235a8, type: 3}
-  m_Name: Torch
+  m_Script: {fileID: 11500000, guid: 6744c957a742a664190d9f565abcb445, type: 3}
+  m_Name: HealthPotion
   m_EditorClassIdentifier: 
   prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
-  prefab_World: {fileID: 3139757657234131619, guid: 795e750768e9e364798e3440095cbbd4, type: 3}
-  type: 4
+  prefab_World: {fileID: 0}
+  type: 3
   description: 
   isStackable: 0
   objectCount: 1
-  isEquipable: 1
-  isConsumable: 0
-  radiusLight: 0
-  isEquiped: 0
+  isEquipable: 0
+  isConsumable: 1
+  health: 20

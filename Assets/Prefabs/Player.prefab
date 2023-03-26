@@ -201,6 +201,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SlotsManager, Assembly-CSharp
+        m_MethodName: ConsumeItem
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: c8c241a8-10a5-4eaf-bd5e-34632de365a4
     m_ActionName: Player/Equipe_Item[/Keyboard/y]
   - m_PersistentCalls:
