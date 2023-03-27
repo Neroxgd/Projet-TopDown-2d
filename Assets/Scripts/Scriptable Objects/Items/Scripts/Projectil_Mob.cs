@@ -10,7 +10,6 @@ public class Projectil_Mob : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        print("efzef");
         DOTween.Kill(transform);
         if (other.CompareTag("Player"))
             PlayerStatistic.Instance.transform.GetComponent<PlayerLife>().TakeDamage(GetComponentInParent<IA>().attackDamage);

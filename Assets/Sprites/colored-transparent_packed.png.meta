@@ -4737,7 +4737,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_220
+      name: papyPNJ
       rect:
         serializedVersion: 2
         x: 400
@@ -22985,7 +22985,6 @@ TextureImporter:
       colored-transparent_packed_799: -989439066
       colored-transparent_packed_779: -973100091
       colored-transparent_packed_384: 584337058
-      colored-transparent_packed_220: -2060739557
       colored-transparent_packed_540: 1393873579
       colored-transparent_packed_984: -104982513
       colored-transparent_packed_218: -1523206250
@@ -23014,8 +23013,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23223,6 +23222,7 @@ TextureImporter:
       colored-transparent_packed_1066: 1490569414
       tiny_sword1: -1256602001
       colored-transparent_packed_613: 136559329
+      papyPNJ: -2060739557
       colored-transparent_packed_183: -1633600857
       colored-transparent_packed_755: 1127245324
       colored-transparent_packed_17: -1768839790
