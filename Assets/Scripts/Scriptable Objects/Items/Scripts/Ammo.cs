@@ -20,7 +20,7 @@ public class Ammo : MonoBehaviour
             print("eeere");
             rbAmmo.bodyType = RigidbodyType2D.Dynamic;
             rbAmmo.gravityScale = 0;
-            rbAmmo.AddForce(-transform.up * 10, ForceMode2D.Impulse);
+            rbAmmo.AddForce(-transform.up * 15, ForceMode2D.Impulse);
             rbAmmo.AddTorque(15, ForceMode2D.Impulse);
             // transform.parent = other.transform;
             Destroy(gameObject, 10);

@@ -12,7 +12,7 @@ public class Jar : MonoBehaviour
         if (other.CompareTag("Ammo"))
             ExploseJar();
         else if (other.CompareTag("Player"))
-            if (other.GetComponent<PlayerAttack>().CanAttack == false)
+            if (other.GetComponentInParent<PlayerAttack>().CanAttack == false)
                 ExploseJar();
     }
 
