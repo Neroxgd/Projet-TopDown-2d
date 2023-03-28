@@ -91,12 +91,17 @@ public abstract class IA : MonoBehaviour
                     state = State.ChasePlayer;
                     break;
                 }
+                if (Physics2D.CircleCast(transform.position, 0.2f, DirectionToPlayer, 0.3f, layerMaskDetectedToNotEnterInCollison))
+                {
+                    state = State.Roaming;
+                    break;
+                }
                 if (canAttack)
                 {
                     canAttack = false;
                     StartCoroutine(AttackPlayer());
                 }
-                    
+
                 break;
         }
     }
