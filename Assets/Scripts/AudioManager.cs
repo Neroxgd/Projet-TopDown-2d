@@ -15,35 +15,44 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        PlayAudioClip("Phobia", true);
+        PlayMusic(audioClips[0]);
     }
 
-    public void PlayAudioClip(string name, bool ifLoop)
+    public void PlayMusic(AudioClip audioClip)
     {
-        AudioClip audioClip = null;
-        foreach (AudioClip clip in audioClips)
-        {
-            if (clip.name == name)
-            {
-                audioClip = clip;
-                break;
-            }
-        }
+        if (audioClip == null) return;
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
 
-        if (audioClip == null)
-        {
-            print("audio clip not found : " + name);
-            return;
-        }
-
-        if (ifLoop)
-        {
-            audioSource.clip = audioClip;
-            audioSource.loop = true;
-            audioSource.Play();
-            return;
-        }
-
+    public void PlayAudioSound(AudioClip audioClip)
+    {
+        if (audioClip == null) return;
         audioSource.PlayOneShot(audioClip);
+        // AudioClip audioClip = null;
+        // foreach (AudioClip clip in audioClips)
+        // {
+        //     if (clip.name == name)
+        //     {
+        //         audioClip = clip;
+        //         break;
+        //     }
+        // }
+
+        // if (audioClip == null)
+        // {
+        //     print("audio clip not found : " + name);
+        //     return;
+        // }
+
+        // if (ifLoop)
+        // {
+        //     audioSource.clip = audioClip;
+        //     audioSource.loop = true;
+        //     audioSource.Play();
+        //     return;
+        // }
+
+        // audioSource.PlayOneShot(audioClip);
     }
 }

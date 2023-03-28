@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
+using TMPro;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -12,6 +13,18 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private InventoryObject inventoryObject;
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
     [SerializeField] private float speedAmmo = 2f;
+    [SerializeField] private TextMeshProUGUI ammoUI;
+    private int ammoCount;
+    public int AmmoCount
+    {
+        get { return ammoCount; }
+        set
+        {
+            ammoCount = value;
+            ammoUI.text = ammoCount.ToString();
+        }
+    }
+
     private float atkSpeed;
     public bool CanAttack { get; private set; } = true;
 
@@ -76,11 +89,19 @@ public class PlayerAttack : MonoBehaviour
                 break;
             }
         }
+        if (ammoCount <= 0)
+        {
+            yield return new WaitForSeconds(atkSpeed);
+            CanAttack = true;
+            Destroy(atk);
+            yield break;
+        }
         GameObject ammo = Instantiate(prefabAmmo, transform.position, atk.transform.rotation, transform);
-        ammo.transform.DOMove(ammo.transform.position + ammo.transform.up * 50, speedAmmo)
+        ammo.GetComponent<Rigidbody2D>().DOMove(ammo.transform.position + ammo.transform.up * 50, speedAmmo)
         .SetSpeedBased(true)
         .SetEase(Ease.Linear)
         .OnComplete(() => Destroy(ammo));
+        AmmoCount--;
         yield return new WaitForSeconds(atkSpeed);
         CanAttack = true;
         Destroy(atk);
@@ -88,7 +109,7 @@ public class PlayerAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Entity"))
+        if (other.CompareTag("Entity") && !CanAttack)
             other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.Attack;
     }
 }

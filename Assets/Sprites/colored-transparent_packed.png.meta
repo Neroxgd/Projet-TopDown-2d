@@ -7152,7 +7152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_335
+      name: ammo
       rect:
         serializedVersion: 2
         x: 672
@@ -22981,6 +22981,7 @@ TextureImporter:
       colored-transparent_packed_766: 382276263
       colored-transparent_packed_800: 742326248
       colored-transparent_packed_846: -419467163
+      ammo: -2135096235
       colored-transparent_packed_172: 1111885418
       colored-transparent_packed_799: -989439066
       colored-transparent_packed_779: -973100091
@@ -23013,8 +23014,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23790,7 +23791,6 @@ TextureImporter:
       colored-transparent_packed_21: 1656686020
       colored-transparent_packed_214: 63331344
       Sword2: 1071563820
-      colored-transparent_packed_335: -2135096235
       colored-transparent_packed_666: 1446491410
       colored-transparent_packed_492: -24857284
       colored-transparent_packed_717: -1556978464

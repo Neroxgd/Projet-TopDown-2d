@@ -300,6 +300,7 @@ MonoBehaviour:
   life: {fileID: 0}
   impulseSource: {fileID: 2427964167995022088}
   shakeForce: 0.5
+  audioClip: {fileID: 0}
 --- !u!114 &2427964167995022088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,4 +398,5 @@ MonoBehaviour:
   defaultSprite: {fileID: -1716252731, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
   inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
   atkDefaultWeaponSpeed: 0.5
-  speedAmmo: 2
+  speedAmmo: 20
+  ammoUI: {fileID: 0}

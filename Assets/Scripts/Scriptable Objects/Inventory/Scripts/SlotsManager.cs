@@ -49,7 +49,7 @@ public class SlotsManager : MonoBehaviour
             Armor_HelmetObject helmetObject = inventory.Container[IndexButton].item as Armor_HelmetObject;
             Armor_ChestplateObject chestplateObject = inventory.Container[IndexButton].item as Armor_ChestplateObject;
             WeaponDistance weaponDistance = inventory.Container[IndexButton].item as WeaponDistance;
-            //add all cast
+           //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
                 if (weaponMelee != null)
