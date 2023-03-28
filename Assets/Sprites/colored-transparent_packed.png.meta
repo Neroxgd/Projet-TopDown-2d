@@ -9420,7 +9420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_443
+      name: door1
       rect:
         serializedVersion: 2
         x: 48
@@ -22951,7 +22951,6 @@ TextureImporter:
       colored-transparent_packed_975: 1599768269
       colored-transparent_packed_658: -2070659245
       heart: 1890322747
-      colored-transparent_packed_443: -1873985162
       colored-transparent_packed_306: -34829307
       colored-transparent_packed_408: -646372839
       colored-transparent_packed_571: 2112952510
@@ -23014,8 +23013,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23484,6 +23483,7 @@ TextureImporter:
       colored-transparent_packed_287: 1409792282
       colored-transparent_packed_66: 1702057879
       colored-transparent_packed_113: 669641006
+      door1: -1873985162
       colored-transparent_packed_431: -39948111
       colored-transparent_packed_696: 2129406405
       colored-transparent_packed_229: -1344946403
