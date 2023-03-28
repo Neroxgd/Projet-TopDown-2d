@@ -1,5 +1,7 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,7 +33,31 @@ public class PlayerMovement : MonoBehaviour
                 slotsManager.IndexButton += indexRaw;
             if (slotsManager.IndexButton < slotsManager.inventory.Container.Count)
                 slotsManager.ShowTextInventory(slotsManager.inventory.Container[slotsManager.IndexButton].item.TextInv());
+            Button[] buttons = slotsManager.GetComponentsInChildren<Button>();
+            StartCoroutine(WaitForNav());
+            IEnumerator WaitForNav()
+            {
+                yield return new WaitForSeconds(0.2f);
+                foreach (var button in buttons)
+                {
+                    Navigation StopNav = new Navigation();
+                    StopNav.mode = Navigation.Mode.None;
+                    button.navigation = StopNav;
+                }
+            }
         }
+        else if (context.canceled)
+        {
+            StopAllCoroutines();
+            Button[] buttons = slotsManager.GetComponentsInChildren<Button>();
+            foreach (var button in buttons)
+            {
+                Navigation StopNav = new Navigation();
+                StopNav.mode = Navigation.Mode.Automatic;
+                button.navigation = StopNav;
+            }
+        }
+
     }
     void FixedUpdate()
     {

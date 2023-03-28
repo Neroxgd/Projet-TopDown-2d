@@ -14,10 +14,9 @@ public class Ammo : MonoBehaviour
     {
         DOTween.Kill(rbAmmo);
         if (other.CompareTag("Entity"))
-            other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.Attack;
+            other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.AttackDistance;
         else if (other.CompareTag("PNJ"))
         {
-            print("eeere");
             rbAmmo.bodyType = RigidbodyType2D.Dynamic;
             rbAmmo.gravityScale = 0;
             rbAmmo.AddForce(-transform.up * 15, ForceMode2D.Impulse);

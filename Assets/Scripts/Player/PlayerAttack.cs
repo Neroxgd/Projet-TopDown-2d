@@ -30,7 +30,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start()
     {
-        PlayerStatistic.Instance.Attack = 5;
+        PlayerStatistic.Instance.AttackMelee = 5;
     }
 
     public void InputAttackMelee(InputAction.CallbackContext context)
@@ -110,6 +110,6 @@ public class PlayerAttack : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Entity") && !CanAttack)
-            other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.Attack;
+            other.GetComponent<IA>().IALife -= PlayerStatistic.Instance.AttackMelee;
     }
 }

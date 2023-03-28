@@ -12,7 +12,7 @@ public class SlotsManager : MonoBehaviour
     public GameObject prefabSlot;
     public Transform world;
     public int IndexButton { get; set; } = -1;
-    [SerializeField] private TextMeshProUGUI textItem, textStatsATK, textStatsDEF;
+    [SerializeField] private TextMeshProUGUI textItem, textStatsATKMelee, textStatsATKDistance, textStatsDEF;
     [SerializeField] private Color colorEquiped = Color.green;
 
     public void DropItem(InputAction.CallbackContext context)
@@ -49,13 +49,13 @@ public class SlotsManager : MonoBehaviour
             Armor_HelmetObject helmetObject = inventory.Container[IndexButton].item as Armor_HelmetObject;
             Armor_ChestplateObject chestplateObject = inventory.Container[IndexButton].item as Armor_ChestplateObject;
             WeaponDistance weaponDistance = inventory.Container[IndexButton].item as WeaponDistance;
-           //add all cast
+            //add all cast
             if (!inventory.Container[IndexButton].isEquiped)
             {
                 if (weaponMelee != null)
-                    PlayerStatistic.Instance.Attack = weaponMelee.atkPower;
+                    PlayerStatistic.Instance.AttackMelee = weaponMelee.atkPower;
                 else if (weaponDistance != null)
-                    PlayerStatistic.Instance.Attack = weaponDistance.atkPower;
+                    PlayerStatistic.Instance.AttackDistance = weaponDistance.atkPower;
                 else if (helmetObject != null)
                     PlayerStatistic.Instance.Armor_Helmet = helmetObject.defPower;
                 else if (chestplateObject != null)
@@ -87,12 +87,12 @@ public class SlotsManager : MonoBehaviour
             {
                 if (weaponMelee != null)
                 {
-                    PlayerStatistic.Instance.Attack = 5;
+                    PlayerStatistic.Instance.AttackMelee = 5;
                     WeaponMelee.isTypeEquiped = false;
                 }
                 else if (weaponDistance != null)
                 {
-                    PlayerStatistic.Instance.Attack = 5;
+                    PlayerStatistic.Instance.AttackDistance = 0;
                     WeaponDistance.isTypeEquiped = false;
                 }
                 else if (lightObject != null)
@@ -148,7 +148,8 @@ public class SlotsManager : MonoBehaviour
 
     private void UpdateShowStats()
     {
-        textStatsATK.text = "atk : " + PlayerStatistic.Instance.Attack.ToString();
+        textStatsATKMelee.text = "atk melee : " + PlayerStatistic.Instance.AttackMelee.ToString();
+        textStatsATKDistance.text = "atk distance : " + PlayerStatistic.Instance.AttackDistance.ToString();
         textStatsDEF.text = "def : " + PlayerStatistic.Instance.TotalArmor.ToString();
     }
 
