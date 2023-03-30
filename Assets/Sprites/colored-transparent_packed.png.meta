@@ -2658,7 +2658,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_121
+      name: papyBarbePNJ
       rect:
         serializedVersion: 2
         x: 384
@@ -23013,8 +23013,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_190: 752051170
@@ -23454,6 +23454,7 @@ TextureImporter:
       colored-transparent_packed_479: -1869997337
       colored-transparent_packed_685: -1161100100
       colored-transparent_packed_206: -344741446
+      papyBarbePNJ: -1928932306
       colored-transparent_packed_996: 987276751
       colored-transparent_packed_132: 563131562
       colored-transparent_packed_941: 987180021
@@ -23604,7 +23605,6 @@ TextureImporter:
       colored-transparent_packed_699: 494874655
       colored-transparent_packed_480: -1544891750
       colored-transparent_packed_1029: -530330941
-      colored-transparent_packed_121: -1928932306
       colored-transparent_packed_901: -1742949362
       colored-transparent_packed_60: 2088243322
       colored-transparent_packed_397: -362570388
