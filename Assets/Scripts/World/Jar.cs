@@ -11,9 +11,8 @@ public class Jar : MonoBehaviour
     {
         if (other.CompareTag("Ammo"))
             ExploseJar();
-        else if (other.CompareTag("Player"))
-            if (other.GetComponentInParent<PlayerAttack>().CanAttack == false)
-                ExploseJar();
+        else if (other.CompareTag("Player") && !other.GetComponentInParent<PlayerAttack>().CanAttack)
+            ExploseJar();
     }
 
     private void ExploseJar()
