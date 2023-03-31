@@ -11,6 +11,7 @@ public enum ItemType
     Torch,
     Helmet,
     Chestplate,
+    Wood,
 }
 
 public abstract class ItemObject : ScriptableObject

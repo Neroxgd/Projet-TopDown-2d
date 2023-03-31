@@ -14,6 +14,7 @@ public class SlotsManager : MonoBehaviour
     public int IndexButton { get; set; } = -1;
     [SerializeField] private TextMeshProUGUI textItem, textStatsATKMelee, textStatsATKDistance, textStatsDEF;
     [SerializeField] private Color colorEquiped = Color.green;
+    [SerializeField] private GameObject uIAmmo;
 
     public void DropItem(InputAction.CallbackContext context)
     {
@@ -73,7 +74,10 @@ public class SlotsManager : MonoBehaviour
                 if (weaponMelee != null)
                     WeaponMelee.isTypeEquiped = true;
                 else if (weaponDistance != null)
+                {
                     WeaponDistance.isTypeEquiped = true;
+                    uIAmmo.SetActive(true);
+                }
                 else if (lightObject != null)
                     LightObject.isTypeEquiped = true;
                 else if (helmetObject != null)
@@ -94,6 +98,7 @@ public class SlotsManager : MonoBehaviour
                 {
                     PlayerStatistic.Instance.AttackDistance = 0;
                     WeaponDistance.isTypeEquiped = false;
+                    uIAmmo.SetActive(false);
                 }
                 else if (lightObject != null)
                     LightObject.isTypeEquiped = false;
