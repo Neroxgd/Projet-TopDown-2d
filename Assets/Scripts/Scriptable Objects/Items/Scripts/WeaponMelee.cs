@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
 
 [CreateAssetMenu(fileName = "New Weapon Melee", menuName = "Inventory System/Items/Weapon_Melee")]
-public class WeaponMelee : ItemObject
+public class WeaponMelee : ItemObject, IEquipable
 {
     public int atkPower;
     public static bool isTypeEquiped;
@@ -18,5 +19,21 @@ public class WeaponMelee : ItemObject
     {
         type = ItemType.Sword1;
         isTypeEquiped = false;
+    }
+
+    bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
+
+    void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
+    void IEquipable.SetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = atkPower;
+    }
+    void IEquipable.ResetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = 5;
     }
 }

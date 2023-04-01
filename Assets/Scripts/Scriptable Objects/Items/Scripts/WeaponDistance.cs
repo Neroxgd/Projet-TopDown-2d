@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
 
 [CreateAssetMenu(fileName = "New Weapon Distance", menuName = "Inventory System/Items/Weapon_Distance")]
-public class WeaponDistance : ItemObject
+public class WeaponDistance : ItemObject, IEquipable
 {
     public int atkPower;
     public static bool isTypeEquiped;
     public float weaponSpeed;
-    public bool ammo; 
-    public float manaConsumed;
 
     public override string TextInv()
     {
@@ -20,5 +19,21 @@ public class WeaponDistance : ItemObject
     {
         type = ItemType.Bow1;
         isTypeEquiped = false;
+    }
+
+    bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
+
+    void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
+    void IEquipable.SetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = atkPower;
+    }
+    void IEquipable.ResetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = 0;
     }
 }

@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Reflection;
 
 [CreateAssetMenu(fileName = "New Armor_Helmet Object", menuName = "Inventory System/Items/Armor_Helmet")]
-public class Armor_HelmetObject : ItemObject
+public class Armor_HelmetObject : ItemObject, IEquipable
 {
     public int defPower;
     public static bool isTypeEquiped;
@@ -17,5 +18,21 @@ public class Armor_HelmetObject : ItemObject
     {
         type = ItemType.Helmet;
         isTypeEquiped = false;
+    }
+
+    bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
+
+    void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
+    void IEquipable.SetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(defPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = defPower;
+    }
+    void IEquipable.ResetStatsPlayer()
+    {
+        FieldInfo variableInfo = GetType().GetField(defPower.ToString());
+        if (variableInfo == null) return;
+        PlayerStatistic.Instance.AttackMelee = 0;
     }
 }
