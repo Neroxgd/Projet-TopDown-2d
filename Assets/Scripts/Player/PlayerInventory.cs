@@ -12,16 +12,16 @@ public class PlayerInventory : MonoBehaviour
         var item = other.GetComponent<Item>();
         if (item)
         {
-            if (item._item.isStackable)
+            if (item._Item.isStackable)
             {
-                inventory.AddItem(item._item, item._item.objectCount);
-                UI_Inventory.Instance.UpdateInventory(item._item);
+                inventory.AddItem(item._Item, item._Item.objectCount);
+                UI_Inventory.Instance.UpdateInventory(item._Item);
             }
             else
-                for (int i = 0; i < item._item.objectCount; i++)
+                for (int i = 0; i < item._Item.objectCount; i++)
                 {
-                    inventory.AddItem(item._item, 1);
-                    UI_Inventory.Instance.UpdateInventory(item._item);
+                    inventory.AddItem(item._Item, 1);
+                    UI_Inventory.Instance.UpdateInventory(item._Item);
                 }
             Destroy(other.gameObject);
         }

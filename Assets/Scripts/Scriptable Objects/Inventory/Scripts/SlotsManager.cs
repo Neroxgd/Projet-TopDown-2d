@@ -14,7 +14,8 @@ public class SlotsManager : MonoBehaviour
     public int IndexButton { get; set; } = -1;
     [SerializeField] private TextMeshProUGUI textItem, textStatsATKMelee, textStatsATKDistance, textStatsDEF;
     [SerializeField] private Color colorEquiped = Color.green;
-    [SerializeField] private GameObject uIAmmo;
+    public GameObject uIAmmo;
+    public GameObject light2DPlayer;
 
     public void DropItem(InputAction.CallbackContext context)
     {
@@ -59,18 +60,14 @@ public class SlotsManager : MonoBehaviour
                             break;
                         }
                     }
-                if (inventory.Container[IndexButton].item is WeaponDistance)
-                    uIAmmo.SetActive(true);
-                equipableObj.SetTypeEquiped(true);
+                equipableObj.SetTypeEquiped(true, this);
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
             }
             else
             {
-                if (inventory.Container[IndexButton].item is WeaponDistance)
-                    uIAmmo.SetActive(false);
                 equipableObj.ResetStatsPlayer();
-                equipableObj.SetTypeEquiped(false);
+                equipableObj.SetTypeEquiped(false, this);
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
                 inventory.Container[IndexButton].isEquiped = false;
             }

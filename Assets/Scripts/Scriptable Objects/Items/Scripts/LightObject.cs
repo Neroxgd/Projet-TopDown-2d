@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 [CreateAssetMenu(fileName = "New Light Object", menuName = "Inventory System/Items/Light")]
 public class LightObject : ItemObject, IEquipable
@@ -21,7 +22,11 @@ public class LightObject : ItemObject, IEquipable
 
     bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
 
-    void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
+    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager)
+    {
+        isTypeEquiped = sign;
+        slotsManager.light2DPlayer.SetActive(isTypeEquiped ? true : false);
+    }
     void IEquipable.SetStatsPlayer() { }
     void IEquipable.ResetStatsPlayer() { }
 }

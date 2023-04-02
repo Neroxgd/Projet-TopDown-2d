@@ -23,7 +23,11 @@ public class WeaponDistance : ItemObject, IEquipable
 
     bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
 
-    void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
+    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager)
+    {
+        isTypeEquiped = sign;
+        slotsManager.uIAmmo.SetActive(isTypeEquiped ? true : false);
+    }
     void IEquipable.SetStatsPlayer()
     {
         PlayerStatistic.Instance.AttackMelee = atkPower;
@@ -32,4 +36,6 @@ public class WeaponDistance : ItemObject, IEquipable
     {
         PlayerStatistic.Instance.AttackMelee = 0;
     }
+
+
 }
