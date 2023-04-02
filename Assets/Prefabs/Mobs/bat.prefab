@@ -250,6 +250,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 63
+  objectsMobDrop: []
 --- !u!1001 &8180941025439627619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -261,6 +262,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: life barre
       objectReference: {fileID: 0}
+    - target: {fileID: 6307452875063088453, guid: f08a42558361e994683e55ea19293eb1, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+    - target: {fileID: 6307452875529856806, guid: f08a42558361e994683e55ea19293eb1, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8514705989331042060, guid: f08a42558361e994683e55ea19293eb1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
