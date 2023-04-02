@@ -19,6 +19,8 @@ public abstract class IA : MonoBehaviour
     protected Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
     public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
+    public GameObject[] objectsMobDrop;
+
     private Image lifeBarre;
     protected enum State
     {
@@ -29,17 +31,17 @@ public abstract class IA : MonoBehaviour
 
     public float IALife
     {
-        get
-        {
-            return iaCurrentLife;
-        }
+        get { return iaCurrentLife; }
         set
         {
             lifeBarre.DOFillAmount(value / iaLife, 0.5f);
             iaCurrentLife = value;
             print(iaCurrentLife);
             if (iaCurrentLife < 1)
+            {
+                DropObjects();
                 Destroy(gameObject);
+            }
         }
     }
 
@@ -126,5 +128,17 @@ public abstract class IA : MonoBehaviour
     {
         directionRoaming = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
         return transform.position + directionRoaming * Random.Range(2, 8);
+    }
+
+    private void DropObjects()
+    {
+        for (int i = 0; i < objectsMobDrop.Length; i++)
+        {
+            var dir = Random.insideUnitCircle.normalized / 2;
+            GameObject currentObj = Instantiate(objectsMobDrop[i], transform.position, Quaternion.identity, transform.parent);
+            currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled;
+            currentObj.transform.DOBlendableMoveBy(dir, 0.5f)
+            .OnComplete(() => currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled);
+        }
     }
 }

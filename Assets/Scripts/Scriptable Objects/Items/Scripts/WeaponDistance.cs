@@ -26,14 +26,10 @@ public class WeaponDistance : ItemObject, IEquipable
     void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
     void IEquipable.SetStatsPlayer()
     {
-        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
-        if (variableInfo == null) return;
         PlayerStatistic.Instance.AttackMelee = atkPower;
     }
     void IEquipable.ResetStatsPlayer()
     {
-        FieldInfo variableInfo = GetType().GetField(atkPower.ToString());
-        if (variableInfo == null) return;
         PlayerStatistic.Instance.AttackMelee = 0;
     }
 }

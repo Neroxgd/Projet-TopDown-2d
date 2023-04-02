@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Reflection;
 
 [CreateAssetMenu(fileName = "New Armor_Chestplate Object", menuName = "Inventory System/Items/Armor_Chestplate")]
 public class Armor_ChestplateObject : ItemObject, IEquipable
@@ -24,14 +23,10 @@ public class Armor_ChestplateObject : ItemObject, IEquipable
     void IEquipable.SetTypeEquiped(bool sign) { isTypeEquiped = sign; }
     void IEquipable.SetStatsPlayer()
     {
-        FieldInfo variableInfo = GetType().GetField(defPower.ToString());
-        if (variableInfo == null) return;
         PlayerStatistic.Instance.AttackMelee = defPower;
     }
     void IEquipable.ResetStatsPlayer()
     {
-        FieldInfo variableInfo = GetType().GetField(defPower.ToString());
-        if (variableInfo == null) return;
         PlayerStatistic.Instance.AttackMelee = 0;
     }
 }
