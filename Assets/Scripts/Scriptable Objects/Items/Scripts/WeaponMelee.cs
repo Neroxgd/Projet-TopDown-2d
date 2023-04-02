@@ -23,7 +23,7 @@ public class WeaponMelee : ItemObject, IEquipable
 
     bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
 
-    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager) { isTypeEquiped = sign; }
+    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager, InventorySlot inventorySlot) { isTypeEquiped = sign; }
     void IEquipable.SetStatsPlayer()
     {
         PlayerStatistic.Instance.AttackMelee = atkPower;

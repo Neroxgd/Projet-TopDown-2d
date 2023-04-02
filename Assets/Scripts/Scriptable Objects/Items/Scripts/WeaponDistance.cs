@@ -23,7 +23,7 @@ public class WeaponDistance : ItemObject, IEquipable
 
     bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }
 
-    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager)
+    void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager, InventorySlot inventorySlot)
     {
         isTypeEquiped = sign;
         slotsManager.uIAmmo.SetActive(isTypeEquiped ? true : false);

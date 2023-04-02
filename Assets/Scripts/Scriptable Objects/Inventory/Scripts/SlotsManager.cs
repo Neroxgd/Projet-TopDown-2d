@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using DG.Tweening;
+using Nerox_gd;
 
 public class SlotsManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SlotsManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textItem, textStatsATKMelee, textStatsATKDistance, textStatsDEF;
     [SerializeField] private Color colorEquiped = Color.green;
     public GameObject uIAmmo;
-    public GameObject light2DPlayer;
+    public PlayerLight playerLight;
 
     public void DropItem(InputAction.CallbackContext context)
     {
@@ -60,14 +61,14 @@ public class SlotsManager : MonoBehaviour
                             break;
                         }
                     }
-                equipableObj.SetTypeEquiped(true, this);
+                equipableObj.SetTypeEquiped(true, this, inventory.Container[IndexButton]);
                 transform.GetChild(IndexButton).GetComponent<Image>().color = colorEquiped;
                 inventory.Container[IndexButton].isEquiped = true;
             }
             else
             {
                 equipableObj.ResetStatsPlayer();
-                equipableObj.SetTypeEquiped(false, this);
+                equipableObj.SetTypeEquiped(false, this, inventory.Container[IndexButton]);
                 transform.GetChild(IndexButton).GetComponent<Image>().color = Color.white;
                 inventory.Container[IndexButton].isEquiped = false;
             }
@@ -120,8 +121,6 @@ public class SlotsManager : MonoBehaviour
         warningMessage.text = message;
         warningMessage.DOFade(0, 5).OnComplete(() => warningMessage.text = "");
     }
-
-
 
     // public void EquipeItem(InputAction.CallbackContext context)
     // {

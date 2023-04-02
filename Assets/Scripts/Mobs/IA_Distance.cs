@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using Nerox_gd;
 
 public class IA_Distance : IA
 {
@@ -10,7 +11,7 @@ public class IA_Distance : IA
 
     protected override IEnumerator AttackPlayer()
     {
-        GameObject proj = Instantiate(projectil, transform.position, Utils.LookAt2D(projectil.transform.rotation, DirectionToPlayer), transform);
+        GameObject proj = Instantiate(projectil, transform.position, Pratique.LookAt2D(projectil.transform.rotation, DirectionToPlayer), transform);
         proj.transform.DOMove(proj.transform.position + proj.transform.up * 50, speedProjectil)
         .SetSpeedBased(true)
         .SetEase(Ease.Linear)

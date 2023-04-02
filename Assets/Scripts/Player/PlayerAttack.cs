@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
 using TMPro;
+using Nerox_gd;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class PlayerAttack : MonoBehaviour
     {
         CanAttack = false;
         GameObject atk = Instantiate(prefabAtkMelee, transform.position, Quaternion.identity, transform);
-        atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
+        atk.transform.rotation = Pratique.LookAtMouse2D(atk.transform);
         if (WeaponMelee.isTypeEquiped)
             for (int i = 0; i < inventoryObject.Container.Count; i++)
             {
@@ -78,7 +79,7 @@ public class PlayerAttack : MonoBehaviour
     {
         CanAttack = false;
         GameObject atk = Instantiate(prefabAtkDistance, transform.position, Quaternion.identity, transform);
-        atk.transform.rotation = Utils.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
+        atk.transform.rotation = Pratique.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
         for (int i = 0; i < inventoryObject.Container.Count; i++)
         {
             WeaponDistance weaponDistance = inventoryObject.Container[i].item as WeaponDistance;
