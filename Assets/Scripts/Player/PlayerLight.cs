@@ -9,10 +9,11 @@ public class PlayerLight : MonoBehaviour
         transform.rotation = Pratique.LookAtMouse2D(transform);
     }
 
-    public void SetLightPlayer(float intensity, float distance, float angleLight)
+    public void SetLightPlayer(float intensity, float distance, Vector2 angleLight)
     {
         GetComponent<Light2D>().intensity = intensity;
         GetComponent<Light2D>().pointLightOuterRadius = distance;
-        GetComponent<Light2D>().pointLightOuterAngle = angleLight;
+        GetComponent<Light2D>().pointLightInnerAngle = angleLight.x;
+        GetComponent<Light2D>().pointLightOuterAngle = angleLight.y;
     }
 }

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 447625d0047c2b249bfc79394a6235a8, type: 3}
+  m_Name: Torch2
+  m_EditorClassIdentifier: 
+  prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
+  prefab_World: {fileID: 3139757657234131619, guid: f2aad90f96849ae4bb83bdb335472f81, type: 3}
+  type: 5
+  description: 
+  isStackable: 0
+  objectCount: 1
+  isEquipable: 1
+  isConsumable: 0
+  radiusLight: 0
+  isEquiped: 0

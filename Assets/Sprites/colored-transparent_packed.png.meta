@@ -4065,7 +4065,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: torch
+      name: torch1
       rect:
         serializedVersion: 2
         x: 672
@@ -4086,7 +4086,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_189
+      name: torch2
       rect:
         serializedVersion: 2
         x: 688
@@ -4107,7 +4107,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_190
+      name: lamp
       rect:
         serializedVersion: 2
         x: 704
@@ -22746,6 +22746,7 @@ TextureImporter:
     nameFileIdTable:
       colored-transparent_packed_79: 985545169
       colored-transparent_packed_427: -798393264
+      lamp: 752051170
       colored-transparent_packed_108: -877218267
       colored-transparent_packed_850: 1223457423
       colored-transparent_packed_872: 1337399439
@@ -22873,7 +22874,6 @@ TextureImporter:
       colored-transparent_packed_314: 370688133
       colored-transparent_packed_1053: -654749310
       colored-transparent_packed_248: -2064406819
-      colored-transparent_packed_189: 1248047272
       colored-transparent_packed_964: -1312894247
       colored-transparent_packed_422: -578459932
       colored-transparent_packed_534: -533799189
@@ -23014,11 +23014,10 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
-      colored-transparent_packed_190: 752051170
       colored-transparent_packed_531: 680138628
       colored-transparent_packed_899: 7687021
       colored-transparent_packed_970: 470616490
@@ -23327,6 +23326,7 @@ TextureImporter:
       colored-transparent_packed_263: -692098773
       colored-transparent_packed_215: -532053270
       colored-transparent_packed_793: -842447066
+      torch2: 1248047272
       colored-transparent_packed_601: 926696097
       colored-transparent_packed_736: 555565306
       colored-transparent_packed_315: -1722499931
@@ -23426,9 +23426,9 @@ TextureImporter:
       colored-transparent_packed_591: 453070278
       colored-transparent_packed_467: -2134718297
       colored-transparent_packed_154: 296102615
-      colored-transparent_packed_780: -778227261
       colored-transparent_packed_959: 1057426326
       colored-transparent_packed_734: 1568429527
+      colored-transparent_packed_780: -778227261
       colored-transparent_packed_673: 1834261544
       colored-transparent_packed_545: -2136544574
       colored-transparent_packed_400: 1770180343
@@ -23695,6 +23695,7 @@ TextureImporter:
       colored-transparent_packed_378: -628780057
       colored-transparent_packed_89: 1672436221
       inventory01: -872028554
+      torch1: -988036414
       colored-transparent_packed_520: -1319647072
       colored-transparent_packed_381: -1378134791
       colored-transparent_packed_81: -954026513
@@ -23765,7 +23766,6 @@ TextureImporter:
       colored-transparent_packed_609: 1722003518
       colored-transparent_packed_52: 692492228
       colored-transparent_packed_881: -1802770133
-      torch: -988036414
       colored-transparent_packed_603: 2127099449
       colored-transparent_packed_395: -128827638
       colored-transparent_packed_794: 623945958

@@ -5,8 +5,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Light Object", menuName = "Inventory System/Items/Light")]
 public class LightObject : ItemObject, IEquipable
 {
-    public int radiusLight;
-    public bool isEquiped;
+    public float intensity;
+    public float distance;
+    public Vector2 angleLight;
     public static bool isTypeEquiped;
 
     public override string TextInv()
@@ -15,7 +16,7 @@ public class LightObject : ItemObject, IEquipable
     }
     void Awake()
     {
-        type = ItemType.Torch;
+        type = ItemType.Torch1;
         isTypeEquiped = false;
     }
 
@@ -25,7 +26,8 @@ public class LightObject : ItemObject, IEquipable
     {
         isTypeEquiped = sign;
         slotsManager.playerLight.gameObject.SetActive(isTypeEquiped ? true : false);
-
+        LightObject instancelight = inventorySlot.item as LightObject;
+        slotsManager.playerLight.SetLightPlayer(instancelight.intensity, instancelight.distance, instancelight.angleLight);
     }
     void IEquipable.SetStatsPlayer() { }
     void IEquipable.ResetStatsPlayer() { }

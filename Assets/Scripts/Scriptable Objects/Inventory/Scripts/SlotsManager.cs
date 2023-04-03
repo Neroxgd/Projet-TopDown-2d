@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 using DG.Tweening;
-using Nerox_gd;
 
 public class SlotsManager : MonoBehaviour
 {
