@@ -20,5 +20,6 @@ MonoBehaviour:
   objectCount: 1
   isEquipable: 1
   isConsumable: 0
-  radiusLight: 0
-  isEquiped: 0
+  intensity: 1.5
+  distance: 6
+  angleLight: {x: 360, y: 360}
