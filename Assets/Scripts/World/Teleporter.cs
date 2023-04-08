@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using DG.Tweening;
 
 public class Teleporter : MonoBehaviour
 {
-    [SerializeField] private Transform pointToTeleporte;
+    [SerializeField] private Transform pointToTeleporte, blackScreen;
     [SerializeField] private Light2D light2D;
     [SerializeField] private float intensityGlobalLight = 1;
-    [SerializeField] private bool YAxeSpawn;
+    [SerializeField] private Vector3 AddAxeSpawn;
+    [SerializeField] private float timeTransition;
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && !PlayerMovement.pausePlayer)
         {
-            other.transform.position = pointToTeleporte.position + (YAxeSpawn ? transform.up : -transform.up);
-            light2D.intensity = intensityGlobalLight;
+            blackScreen.DOScale(Vector3.one, timeTransition)
+            .OnComplete(() =>
+            {
+                other.transform.position = pointToTeleporte.position + AddAxeSpawn;
+                light2D.intensity = intensityGlobalLight;
+                blackScreen.DOScale(Vector3.one * 140, timeTransition).SetDelay(1f);
+            });
         }
-
     }
 }

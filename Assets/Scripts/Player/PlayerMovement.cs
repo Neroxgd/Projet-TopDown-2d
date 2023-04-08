@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerMovement : MonoBehaviour
 {
     private Vector2 direction;
+    public static bool pausePlayer;
     [SerializeField] SlotsManager slotsManager;
     [SerializeField] private UI_Inventory uI_Inventory;
     [SerializeField, Range(1, 200)] private int speed = 1;
@@ -13,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private int indexRaw = 9;
     public void Move(InputAction.CallbackContext context)
     {
+        if (pausePlayer) return;
         if (!uI_Inventory.ShowInventory)
         {
             direction = context.ReadValue<Vector2>();

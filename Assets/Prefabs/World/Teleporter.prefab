@@ -72,3 +72,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointToTeleporte: {fileID: 0}
+  blackScreen: {fileID: 0}
+  light2D: {fileID: 0}
+  intensityGlobalLight: 1
+  YAxeSpawn: 0
+  timeTransition: 0.5
