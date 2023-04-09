@@ -20,6 +20,7 @@ public abstract class IA : MonoBehaviour
     public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
     public GameObject[] objectsMobDrop;
+    private SpriteRenderer spriteRenderer;
 
     private Image lifeBarre;
     protected enum State
@@ -51,10 +52,12 @@ public abstract class IA : MonoBehaviour
         iaCurrentLife = iaLife;
         lifeBarre = GetComponentsInChildren<Image>()[1];
         canAttack = true;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (DistanceBetweenIAandPlayer > 30) return;
         StateManager();
     }
 
@@ -120,6 +123,7 @@ public abstract class IA : MonoBehaviour
     private void ChasePlayer()
     {
         transform.position = Vector3.MoveTowards(transform.position, PlayerStatistic.Instance.transform.position, speedMove * 2 * Time.deltaTime);
+        spriteRenderer.flipX = PlayerStatistic.Instance.transform.position.x < transform.position.x ? true : false;
     }
 
     protected abstract IEnumerator AttackPlayer();
@@ -127,6 +131,7 @@ public abstract class IA : MonoBehaviour
     private Vector3 GetRandomDirection()
     {
         directionRoaming = new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        spriteRenderer.flipX = directionRoaming.x < 0 ? true : false;
         return transform.position + directionRoaming * Random.Range(2, 8);
     }
 
