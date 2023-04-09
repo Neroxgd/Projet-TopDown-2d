@@ -8937,7 +8937,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_420
+      name: crocodile
       rect:
         serializedVersion: 2
         x: 464
@@ -22856,6 +22856,7 @@ TextureImporter:
       colored-transparent_packed_771: 1352955641
       colored-transparent_packed_1076: -210964147
       colored-transparent_packed_599: -1964297478
+      crocodile: 253335248
       colored-transparent_packed_1016: 1577425088
       colored-transparent_packed_740: 1311208400
       colored-transparent_packed_481: -1540893656
@@ -23015,8 +23016,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_531: 680138628
@@ -23262,7 +23263,6 @@ TextureImporter:
       colored-transparent_packed_138: -1387934252
       colored-transparent_packed_383: 1104707750
       colored-transparent_packed_826: -1697089210
-      colored-transparent_packed_420: 253335248
       colored-transparent_packed_8: -55521708
       colored-transparent_packed_784: 2046146155
       colored-transparent_packed_509: -1920137724
