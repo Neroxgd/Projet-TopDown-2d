@@ -6858,7 +6858,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_321
+      name: blorp
       rect:
         serializedVersion: 2
         x: 448
@@ -6879,7 +6879,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_322
+      name: squelette
       rect:
         serializedVersion: 2
         x: 464
@@ -8895,7 +8895,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_418
+      name: slime
       rect:
         serializedVersion: 2
         x: 432
@@ -22849,6 +22849,7 @@ TextureImporter:
       colored-transparent_packed_575: 1809235863
       colored-transparent_packed_772: 1971419661
       colored-transparent_packed_592: -1177282739
+      slime: -1048075470
       colored-transparent_packed_877: 225476585
       colored-transparent_packed_758: 1710672390
       colored-transparent_packed_1001: 1704076926
@@ -23016,8 +23017,8 @@ TextureImporter:
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
-      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_593: -1339455034
+      colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_531: 680138628
@@ -23336,6 +23337,7 @@ TextureImporter:
       colored-transparent_packed_689: -1901099872
       colored-transparent_packed_824: 462447437
       colored-transparent_packed_390: -1602250792
+      squelette: 941669611
       colored-transparent_packed_5: -1880793492
       colored-transparent_packed_426: -332683875
       colored-transparent_packed_925: -1131553682
@@ -23367,7 +23369,6 @@ TextureImporter:
       colored-transparent_packed_484: 529814581
       colored-transparent_packed_170: 2130317504
       bow1: 550353900
-      colored-transparent_packed_418: -1048075470
       colored-transparent_packed_316: 1987281233
       colored-transparent_packed_456: -760510205
       colored-transparent_packed_149: 2119889531
@@ -23386,10 +23387,10 @@ TextureImporter:
       colored-transparent_packed_539: 2080557954
       colored-transparent_packed_436: 2087049528
       colored-transparent_packed_196: 661280323
-      colored-transparent_packed_305: 109969862
-      colored-transparent_packed_321: 326523589
+      colored-transparent_packed_814: -2096194554
       colored-transparent_packed_873: 172055427
       colored-transparent_packed_833: -1562461813
+      colored-transparent_packed_305: 109969862
       colored-transparent_packed_532: 1783830653
       colored-transparent_packed_651: 1901660839
       colored-transparent_packed_257: -542268032
@@ -23399,7 +23400,6 @@ TextureImporter:
       colored-transparent_packed_235: 154772083
       colored-transparent_packed_924: 1037005177
       colored-transparent_packed_608: 1487580570
-      colored-transparent_packed_814: -2096194554
       colored-transparent_packed_911: -2036318672
       colored-transparent_packed_61: 157495144
       colored-transparent_packed_589: -2091115603
@@ -23533,6 +23533,7 @@ TextureImporter:
       colored-transparent_packed_46: 614824917
       colored-transparent_packed_934: 274871042
       colored-transparent_packed_874: -1416960957
+      blorp: 326523589
       colored-transparent_packed_155: 751044566
       colored-transparent_packed_808: -674714767
       colored-transparent_packed_548: 2070381057
@@ -23706,7 +23707,6 @@ TextureImporter:
       colored-transparent_packed_783: -374454606
       colored-transparent_packed_661: -355386915
       colored-transparent_packed_908: 6892797
-      colored-transparent_packed_322: 941669611
       colored-transparent_packed_243: -13252587
       colored-transparent_packed_762: -333117485
       colored-transparent_packed_692: -1558179189

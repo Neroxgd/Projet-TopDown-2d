@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iaLife: 40
-  speedMove: 0.2
+  speedMove: 0.5
   detectPlayerRange: 2
   attackPlayerRange: 1
   attackDamage: 20
