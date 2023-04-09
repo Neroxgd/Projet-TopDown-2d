@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posToMove: {fileID: 0}
-  pauseBetweenLetter: 0.1
+  pauseBetweenLetter: 0.05
   originePos: {fileID: 0}
 --- !u!222 &4928363291264815838
 CanvasRenderer:

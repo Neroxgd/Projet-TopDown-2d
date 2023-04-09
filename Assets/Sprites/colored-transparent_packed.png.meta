@@ -600,7 +600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_23
+      name: priest
       rect:
         serializedVersion: 2
         x: 384
@@ -12087,7 +12087,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_570
+      name: key
       rect:
         serializedVersion: 2
         x: 512
@@ -23027,6 +23027,7 @@ TextureImporter:
       colored-transparent_packed_109: 1774299569
       colored-transparent_packed_230: -129494175
       colored-transparent_packed_725: 590938328
+      key: -1558685758
       colored-transparent_packed_1017: -1830375357
       colored-transparent_packed_320: 781696925
       colored-transparent_packed_511: 788982899
@@ -23174,9 +23175,8 @@ TextureImporter:
       colored-transparent_packed_870: -1710668848
       colored-transparent_packed_930: 1123637343
       colored-transparent_packed_349: -580582035
-      colored-transparent_packed_570: -1558685758
-      colored-transparent_packed_63: -1762651755
       colored-transparent_packed_1006: 491152109
+      colored-transparent_packed_63: -1762651755
       colored-transparent_packed_657: -1423825951
       health_potion: 737358301
       colored-transparent_packed_336: 794468732
@@ -23244,6 +23244,7 @@ TextureImporter:
       colored-transparent_packed_980: -1349055324
       colored-transparent_packed_607: 345529426
       colored-transparent_packed_39: 1144382427
+      priest: 1271602444
       colored-transparent_packed_54: -729370616
       colored-transparent_packed_909: 159226923
       colored-transparent_packed_265: 1816988376
@@ -23270,7 +23271,6 @@ TextureImporter:
       colored-transparent_packed_732: -1481192298
       colored-transparent_packed_629: 1496137755
       colored-transparent_packed_951: -559838589
-      colored-transparent_packed_23: 1271602444
       colored-transparent_packed_977: -130405942
       colored-transparent_packed_971: -244515526
       colored-transparent_packed_67: -1881170658

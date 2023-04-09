@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PNJ : MonoBehaviour
 {
-    [SerializeField] private string textPNJ;
+    [TextArea(5, 20)] public string textPNJ;
     private BullPNJ _bullPNJ;
     void Start()
     {
