@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6136fef391411c4cab01fbdc61d2d74, type: 3}
   m_Name: Bow2
   m_EditorClassIdentifier: 
-  prefabItem_UI: {fileID: 0}
-  prefab_World: {fileID: 0}
+  prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
+  prefab_World: {fileID: 1984650627523828431, guid: 321b9ab4d4394204fb43df0d5c3ebba6, type: 3}
   type: 5
   description: 
   isStackable: 0

@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
   prefab_World: {fileID: 1984650627523828431, guid: d363d8dcb758eb74f84ada1b26075ccc, type: 3}
-  type: 2
+  type: 4
   description: 
   isStackable: 0
   objectCount: 1
   isEquipable: 1
+  isConsumable: 0
   atkPower: 10
-  weaponSpeed: 1
-  ammoORmana: 0
+  weaponSpeed: 3

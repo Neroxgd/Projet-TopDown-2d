@@ -4779,7 +4779,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_222
+      name: mountainPNJ
       rect:
         serializedVersion: 2
         x: 432
@@ -6102,7 +6102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_285
+      name: arrowMob
       rect:
         serializedVersion: 2
         x: 656
@@ -23014,6 +23014,7 @@ TextureImporter:
       colored-transparent_packed_450: 1349387300
       colored-transparent_packed_409: 343598089
       colored-transparent_packed_96: 465256744
+      arrowMob: 545584528
       chestplat1: -69190361
       colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
@@ -23575,6 +23576,7 @@ TextureImporter:
       colored-transparent_packed_968: -2076813158
       colored-transparent_packed_577: 1117743963
       colored-transparent_packed_795: 1978655951
+      mountainPNJ: 1378091424
       colored-transparent_packed_428: 174744815
       colored-transparent_packed_749: -540812786
       colored-transparent_packed_694: -2092564057
@@ -23607,7 +23609,6 @@ TextureImporter:
       colored-transparent_packed_901: -1742949362
       colored-transparent_packed_60: 2088243322
       colored-transparent_packed_397: -362570388
-      colored-transparent_packed_285: 545584528
       colored-transparent_packed_498: -1271494408
       colored-transparent_packed_525: -679582114
       colored-transparent_packed_955: 1122929440
@@ -23754,7 +23755,6 @@ TextureImporter:
       colored-transparent_packed_1041: 1226846462
       colored-transparent_packed_543: -1132174321
       colored-transparent_packed_841: -132885868
-      colored-transparent_packed_222: 1378091424
       colored-transparent_packed_329: -2075154751
       colored-transparent_packed_558: -423300767
       colored-transparent_packed_118: 1876791776

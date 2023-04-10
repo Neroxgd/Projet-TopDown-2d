@@ -23,5 +23,10 @@ public class PlayerLife : MonoBehaviour
         PlayerStatistic.Instance.Life -= dmg;
         if (dmg >= 0)
             AudioManager.Instance.PlayAudioSound(audioClip);
+        if (PlayerStatistic.Instance.Life <= 1)
+        {
+            GetComponent<PlayerDeath>().Death();
+            TakeDamage(-100);
+        }
     }
 }

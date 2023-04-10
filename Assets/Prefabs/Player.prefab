@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8277874766218779830}
   - component: {fileID: 6759724665872925174}
   - component: {fileID: 2100575368166111226}
+  - component: {fileID: 4071241587732431567}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -400,6 +401,20 @@ MonoBehaviour:
   atkDefaultWeaponSpeed: 1
   speedAmmo: 20
   ammoUI: {fileID: 0}
+--- !u!114 &4071241587732431567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2427964167995022081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac80afd8ba2d5f5468cdd8d6afbf50c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackScreen: {fileID: 0}
+  timeTransition: 0.5
 --- !u!1 &6867876428003682746
 GameObject:
   m_ObjectHideFlags: 0
