@@ -37,7 +37,6 @@ public abstract class IA : MonoBehaviour
         {
             lifeBarre.DOFillAmount(value / iaLife, 0.5f);
             iaCurrentLife = value;
-            print(iaCurrentLife);
             if (iaCurrentLife < 1)
             {
                 DropObjects();
