@@ -19,5 +19,6 @@ MonoBehaviour:
   isStackable: 0
   objectCount: 1
   isEquipable: 1
-  atkPower: 12
-  weaponSpeed: 0.5
+  isConsumable: 0
+  atkPower: 10
+  weaponSpeed: 0.8

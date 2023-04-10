@@ -267,7 +267,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotsManager: {fileID: 0}
   uI_Inventory: {fileID: 0}
-  speed: 6
   rbPlayer: {fileID: 2427964167995022083}
   indexRaw: 9
 --- !u!58 &2427964167995022086
@@ -398,7 +397,7 @@ MonoBehaviour:
   prefabAmmo: {fileID: 2585694542484511278, guid: cbef8a4edb726d24688929ff85c1d157, type: 3}
   defaultSprite: {fileID: -1716252731, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
   inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
-  atkDefaultWeaponSpeed: 0.5
+  atkDefaultWeaponSpeed: 1
   speedAmmo: 20
   ammoUI: {fileID: 0}
 --- !u!1 &6867876428003682746

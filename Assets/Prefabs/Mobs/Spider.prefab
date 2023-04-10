@@ -243,7 +243,7 @@ MonoBehaviour:
   speedMove: 1.2
   detectPlayerRange: 4
   attackPlayerRange: 0.4
-  attackDamage: 30
+  attackDamage: 50
   speedAttack: 4
   layerMaskDetectedToNotEnterInCollison:
     serializedVersion: 2
