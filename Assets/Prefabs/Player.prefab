@@ -301,6 +301,7 @@ MonoBehaviour:
   life: {fileID: 0}
   impulseSource: {fileID: 2427964167995022088}
   shakeForce: 0.5
+  musicNormalBiome: {fileID: 8300000, guid: 328235c6538d4ab4fb61215c26be2122, type: 3}
   audioClip: {fileID: 0}
 --- !u!114 &2427964167995022088
 MonoBehaviour:
@@ -415,6 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blackScreen: {fileID: 0}
   timeTransition: 0.5
+  light2D: {fileID: 0}
 --- !u!1 &6867876428003682746
 GameObject:
   m_ObjectHideFlags: 0

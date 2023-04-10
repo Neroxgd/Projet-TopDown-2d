@@ -23,10 +23,10 @@ public class Armor_ChestplateObject : ItemObject, IEquipable
     void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager, InventorySlot inventorySlot) { isTypeEquiped = sign; }
     void IEquipable.SetStatsPlayer()
     {
-        PlayerStatistic.Instance.AttackMelee = defPower;
+        PlayerStatistic.Instance.Armor_Chestplate = defPower;
     }
     void IEquipable.ResetStatsPlayer()
     {
-        PlayerStatistic.Instance.AttackMelee = 0;
+        PlayerStatistic.Instance.Armor_Chestplate = 0;
     }
 }

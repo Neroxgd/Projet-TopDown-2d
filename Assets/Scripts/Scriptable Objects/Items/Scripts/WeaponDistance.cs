@@ -30,11 +30,11 @@ public class WeaponDistance : ItemObject, IEquipable
     }
     void IEquipable.SetStatsPlayer()
     {
-        PlayerStatistic.Instance.AttackMelee = atkPower;
+        PlayerStatistic.Instance.AttackDistance = atkPower;
     }
     void IEquipable.ResetStatsPlayer()
     {
-        PlayerStatistic.Instance.AttackMelee = 0;
+        PlayerStatistic.Instance.AttackDistance = 0;
     }
 
 
