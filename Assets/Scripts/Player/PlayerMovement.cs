@@ -9,9 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public static bool pausePlayer;
     [SerializeField] SlotsManager slotsManager;
     [SerializeField] private UI_Inventory uI_Inventory;
-    [SerializeField, Range(1, 200)] private int speed = 1;
+    public float SpeedPlayer { get; set; } = 5;
     [SerializeField] private Rigidbody2D rbPlayer;
     [SerializeField] private int indexRaw = 9;
+
+    void Start()
+    {
+        PlayerStatistic.Instance.MoveSpeed = SpeedPlayer;
+    }
     public void Move(InputAction.CallbackContext context)
     {
         if (pausePlayer) return;
@@ -63,6 +68,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void FixedUpdate()
     {
-        rbPlayer.velocity = direction * speed;
+        rbPlayer.velocity = direction * PlayerStatistic.Instance.MoveSpeed;
     }
 }

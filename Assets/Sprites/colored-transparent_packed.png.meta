@@ -8979,7 +8979,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_422
+      name: rat
       rect:
         serializedVersion: 2
         x: 496
@@ -13074,7 +13074,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_617
+      name: cobweb
       rect:
         serializedVersion: 2
         x: 480
@@ -22877,11 +22877,10 @@ TextureImporter:
       colored-transparent_packed_1053: -654749310
       colored-transparent_packed_248: -2064406819
       colored-transparent_packed_964: -1312894247
-      colored-transparent_packed_422: -578459932
       colored-transparent_packed_534: -533799189
+      colored-transparent_packed_1031: 171600476
       colored-transparent_packed_844: 1428257913
       colored-transparent_packed_896: -2047313142
-      colored-transparent_packed_1031: 171600476
       colored-transparent_packed_838: 1667288988
       colored-transparent_packed_966: -1828352973
       colored-transparent_packed_55: 237957787
@@ -23257,7 +23256,6 @@ TextureImporter:
       colored-transparent_packed_919: -1759256949
       colored-transparent_packed_159: 794274591
       colored-transparent_packed_182: -110395701
-      colored-transparent_packed_617: 1850592420
       colored-transparent_packed_983: -325487304
       colored-transparent_packed_24: -1627722240
       colored-transparent_packed_707: 2077017002
@@ -23567,6 +23565,7 @@ TextureImporter:
       colored-transparent_packed_753: -416369921
       colored-transparent_packed_219: -1797460261
       colored-transparent_packed_88: 1202978473
+      rat: -578459932
       colored-transparent_packed_106: -833737595
       colored-transparent_packed_148: -1915070743
       colored-transparent_packed_759: 132781204
@@ -23805,6 +23804,7 @@ TextureImporter:
       colored-transparent_packed_813: 1536149342
       colored-transparent_packed_576: -2005353670
       colored-transparent_packed_164: 435766169
+      cobweb: 1850592420
       colored-transparent_packed_201: 1967998537
       colored-transparent_packed_917: 1467430903
       colored-transparent_packed_722: -122898097
