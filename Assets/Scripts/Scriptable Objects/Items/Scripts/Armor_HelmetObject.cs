@@ -15,7 +15,7 @@ public class Armor_HelmetObject : ItemObject, IEquipable
 
     void Awake()
     {
-        type = ItemType.Helmet;
+        type = ItemType.Helmet2;
         isTypeEquiped = false;
     }
 

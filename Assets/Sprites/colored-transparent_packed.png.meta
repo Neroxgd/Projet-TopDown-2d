@@ -768,7 +768,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_31
+      name: helmet1
       rect:
         serializedVersion: 2
         x: 512
@@ -789,7 +789,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: helmet
+      name: helmet2
       rect:
         serializedVersion: 2
         x: 528
@@ -810,7 +810,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_33
+      name: helmet3
       rect:
         serializedVersion: 2
         x: 544
@@ -831,7 +831,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_34
+      name: helmet4
       rect:
         serializedVersion: 2
         x: 560
@@ -852,7 +852,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_35
+      name: helmet5
       rect:
         serializedVersion: 2
         x: 576
@@ -1797,7 +1797,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_80
+      name: chestplat1
       rect:
         serializedVersion: 2
         x: 512
@@ -1818,7 +1818,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_81
+      name: chestplat2
       rect:
         serializedVersion: 2
         x: 528
@@ -1839,7 +1839,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: chestplate
+      name: chestplate3
       rect:
         serializedVersion: 2
         x: 544
@@ -1860,7 +1860,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_83
+      name: chestplat4
       rect:
         serializedVersion: 2
         x: 560
@@ -1881,7 +1881,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_84
+      name: chestplat5
       rect:
         serializedVersion: 2
         x: 576
@@ -7068,7 +7068,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_331
+      name: bow2
       rect:
         serializedVersion: 2
         x: 608
@@ -7110,7 +7110,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_333
+      name: bow3
       rect:
         serializedVersion: 2
         x: 640
@@ -9084,7 +9084,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_427
+      name: sword3
       rect:
         serializedVersion: 2
         x: 576
@@ -10113,7 +10113,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_476
+      name: sword4
       rect:
         serializedVersion: 2
         x: 576
@@ -22745,7 +22745,6 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       colored-transparent_packed_79: 985545169
-      colored-transparent_packed_427: -798393264
       lamp: 752051170
       colored-transparent_packed_108: -877218267
       colored-transparent_packed_850: 1223457423
@@ -22831,10 +22830,12 @@ TextureImporter:
       colored-transparent_packed_741: 1683823997
       colored-transparent_packed_961: 870432086
       colored-transparent_packed_47: 1744827855
+      helmet2: -163287031
       colored-transparent_packed_225: -290128452
       colored-transparent_packed_283: 1521119656
       colored-transparent_packed_756: 542033029
       colored-transparent_packed_499: -913216560
+      bow3: -1338135507
       colored-transparent_packed_116: 745654641
       colored-transparent_packed_568: -1097280603
       colored-transparent_packed_871: 629428238
@@ -22871,28 +22872,24 @@ TextureImporter:
       colored-transparent_packed_738: 744820219
       colored-transparent_packed_1073: -1869072586
       inventory20: -787764632
-      colored-transparent_packed_34: 2269386
-      colored-transparent_packed_211: 914743730
       colored-transparent_packed_314: 370688133
+      colored-transparent_packed_211: 914743730
       colored-transparent_packed_1053: -654749310
       colored-transparent_packed_248: -2064406819
       colored-transparent_packed_964: -1312894247
       colored-transparent_packed_422: -578459932
       colored-transparent_packed_534: -533799189
-      colored-transparent_packed_83: -1283632402
+      colored-transparent_packed_844: 1428257913
       colored-transparent_packed_896: -2047313142
       colored-transparent_packed_1031: 171600476
-      colored-transparent_packed_844: 1428257913
       colored-transparent_packed_838: 1667288988
       colored-transparent_packed_966: -1828352973
       colored-transparent_packed_55: 237957787
       colored-transparent_packed_212: 256436633
       colored-transparent_packed_632: -513415955
       colored-transparent_packed_541: 715595277
-      chestplate: 263226125
-      colored-transparent_packed_331: -1687619011
-      colored-transparent_packed_276: -761861129
       colored-transparent_packed_768: 1203833384
+      colored-transparent_packed_276: -761861129
       colored-transparent_packed_660: 1706613837
       colored-transparent_packed_538: 371230997
       colored-transparent_packed_770: -1669338209
@@ -22926,6 +22923,7 @@ TextureImporter:
       inventory_case: -513103288
       colored-transparent_packed_858: 1884039092
       colored-transparent_packed_486: 949110363
+      helmet3: -1121255439
       colored-transparent_packed_223: 857313242
       colored-transparent_packed_1005: 1302414539
       colored-transparent_packed_244: 1884727631
@@ -22972,6 +22970,7 @@ TextureImporter:
       colored-transparent_packed_606: 519109813
       colored-transparent_packed_671: 139650452
       colored-transparent_packed_1075: 1853343744
+      sword4: 111347974
       colored-transparent_packed_143: 421863232
       colored-transparent_packed_670: 1931994517
       colored-transparent_packed_677: -1027149183
@@ -23015,8 +23014,8 @@ TextureImporter:
       colored-transparent_packed_1015: -703926806
       colored-transparent_packed_450: 1349387300
       colored-transparent_packed_409: 343598089
-      colored-transparent_packed_476: 111347974
       colored-transparent_packed_96: 465256744
+      chestplat1: -69190361
       colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
       colored-transparent_packed_377: 2131524282
@@ -23024,10 +23023,10 @@ TextureImporter:
       colored-transparent_packed_531: 680138628
       colored-transparent_packed_899: 7687021
       colored-transparent_packed_970: 470616490
-      colored-transparent_packed_109: 1774299569
+      key: -1558685758
       colored-transparent_packed_230: -129494175
       colored-transparent_packed_725: 590938328
-      key: -1558685758
+      colored-transparent_packed_109: 1774299569
       colored-transparent_packed_1017: -1830375357
       colored-transparent_packed_320: 781696925
       colored-transparent_packed_511: 788982899
@@ -23056,17 +23055,17 @@ TextureImporter:
       colored-transparent_packed_876: 493670876
       colored-transparent_packed_1025: -2139871366
       colored-transparent_packed_236: -798590050
-      colored-transparent_packed_611: 1738350463
-      colored-transparent_packed_167: 1382092564
-      colored-transparent_packed_594: 2140846888
       colored-transparent_packed_521: 1984722809
+      colored-transparent_packed_611: 1738350463
+      colored-transparent_packed_594: 2140846888
       colored-transparent_packed_20: 1711806534
-      colored-transparent_packed_185: 1792449022
+      colored-transparent_packed_167: 1382092564
       colored-transparent_packed_494: 994887910
       colored-transparent_packed_28: -1157708118
       colored-transparent_packed_110: 64452254
       colored-transparent_packed_204: 1652396350
       colored-transparent_packed_569: 1093819371
+      colored-transparent_packed_185: 1792449022
       colored-transparent_packed_875: -631368360
       colored-transparent_packed_256: -557039479
       colored-transparent_packed_600: -962680481
@@ -23114,7 +23113,6 @@ TextureImporter:
       colored-transparent_packed_1033: 139579881
       colored-transparent_packed_371: -1528990128
       colored-transparent_packed_323: 1767254435
-      colored-transparent_packed_80: -69190361
       colored-transparent_packed_455: -822080926
       colored-transparent_packed_965: 690138403
       colored-transparent_packed_1049: 574112034
@@ -23148,6 +23146,7 @@ TextureImporter:
       colored-transparent_packed_797: -1675225338
       colored-transparent_packed_809: 1850410406
       colored-transparent_packed_440: 1142049988
+      helmet4: 2269386
       colored-transparent_packed_120: 178863587
       colored-transparent_packed_153: 111380789
       colored-transparent_packed_851: 968038578
@@ -23180,6 +23179,7 @@ TextureImporter:
       colored-transparent_packed_657: -1423825951
       health_potion: 737358301
       colored-transparent_packed_336: 794468732
+      sword3: -798393264
       colored-transparent_packed_247: 1046673193
       colored-transparent_packed_711: -818928376
       colored-transparent_packed_514: -676399691
@@ -23209,7 +23209,6 @@ TextureImporter:
       colored-transparent_packed_38: -1009523124
       colored-transparent_packed_304: 755565533
       colored-transparent_packed_747: -371097741
-      colored-transparent_packed_33: -1121255439
       colored-transparent_packed_1038: 2069736296
       colored-transparent_packed_487: -1732472652
       colored-transparent_packed_582: -1119103432
@@ -23337,6 +23336,7 @@ TextureImporter:
       colored-transparent_packed_689: -1901099872
       colored-transparent_packed_824: 462447437
       colored-transparent_packed_390: -1602250792
+      chestplat5: 1584038302
       squelette: 941669611
       colored-transparent_packed_5: -1880793492
       colored-transparent_packed_426: -332683875
@@ -23353,6 +23353,7 @@ TextureImporter:
       colored-transparent_packed_453: 1071330471
       colored-transparent_packed_174: 915451845
       colored-transparent_packed_684: -1850935285
+      chestplat4: -1283632402
       colored-transparent_packed_362: -1194304227
       colored-transparent_packed_69: -1068284693
       colored-transparent_packed_750: 1745965580
@@ -23416,8 +23417,8 @@ TextureImporter:
       colored-transparent_packed_145: -217551712
       colored-transparent_packed_62: -262042614
       colored-transparent_packed_127: -856788203
-      colored-transparent_packed_769: 2026353647
       colored-transparent_packed_726: -777073330
+      colored-transparent_packed_769: 2026353647
       colored-transparent_packed_213: -135375633
       colored-transparent_packed_387: -1764900828
       colored-transparent_packed_291: -843195719
@@ -23450,6 +23451,7 @@ TextureImporter:
       colored-transparent_packed_485: -1354580446
       colored-transparent_packed_943: -2055908792
       colored-transparent_packed_479: -1869997337
+      chestplate3: 263226125
       colored-transparent_packed_685: -1161100100
       colored-transparent_packed_206: -344741446
       papyBarbePNJ: -1928932306
@@ -23510,7 +23512,6 @@ TextureImporter:
       colored-transparent_packed_242: 1230357231
       colored-transparent_packed_986: -361540848
       colored-transparent_packed_303: 52683105
-      colored-transparent_packed_31: -1726192966
       colored-transparent_packed_988: -316542827
       colored-transparent_packed_261: 686019184
       colored-transparent_packed_344: -805887249
@@ -23525,6 +23526,7 @@ TextureImporter:
       colored-transparent_packed_912: -1405136820
       inventory02: -1623340273
       colored-transparent_packed_449: 2033421991
+      helmet1: -1726192966
       colored-transparent_packed_828: -1782253715
       colored-transparent_packed_385: 1481245037
       colored-transparent_packed_798: 1844323023
@@ -23569,7 +23571,6 @@ TextureImporter:
       colored-transparent_packed_148: -1915070743
       colored-transparent_packed_759: 132781204
       colored-transparent_packed_171: 706258397
-      colored-transparent_packed_333: -1338135507
       colored-transparent_packed_744: -64042851
       colored-transparent_packed_760: 2146637465
       colored-transparent_packed_968: -2076813158
@@ -23631,6 +23632,7 @@ TextureImporter:
       colored-transparent_packed_224: -145173116
       colored-transparent_packed_742: -619438857
       colored-transparent_packed_820: 41069347
+      helmet5: 1183976737
       colored-transparent_packed_370: -1846943613
       colored-transparent_packed_139: 70335025
       colored-transparent_packed_1064: -2096970405
@@ -23659,10 +23661,10 @@ TextureImporter:
       colored-transparent_packed_648: 855020282
       colored-transparent_packed_160: 1873800356
       colored-transparent_packed_249: -473238186
-      colored-transparent_packed_84: 1584038302
-      colored-transparent_packed_379: 662011403
       colored-transparent_packed_398: 1527220985
+      colored-transparent_packed_379: 662011403
       colored-transparent_packed_624: -2106566320
+      colored-transparent_packed_940: 173133641
       colored-transparent_packed_459: 940863012
       colored-transparent_packed_706: 1825013207
       colored-transparent_packed_437: 1290312693
@@ -23673,10 +23675,9 @@ TextureImporter:
       colored-transparent_packed_960: 47906409
       colored-transparent_packed_221: -1005544085
       colored-transparent_packed_529: 1873326263
-      colored-transparent_packed_940: 173133641
+      goblin: 63050843
       colored-transparent_packed_807: -354618906
       colored-transparent_packed_178: 1903171597
-      goblin: 63050843
       colored-transparent_packed_468: 1690190705
       colored-transparent_packed_77: 1704130418
       colored-transparent_packed_254: 1634386781
@@ -23698,10 +23699,8 @@ TextureImporter:
       torch1: -988036414
       colored-transparent_packed_520: -1319647072
       colored-transparent_packed_381: -1378134791
-      colored-transparent_packed_81: -954026513
       colored-transparent_packed_380: 2033106987
       inventory22: 1295571557
-      helmet: -163287031
       bear: 37545227
       colored-transparent_packed_887: -545015244
       colored-transparent_packed_783: -374454606
@@ -23775,7 +23774,6 @@ TextureImporter:
       colored-transparent_packed_853: -1951482623
       colored-transparent_packed_448: -1223721898
       colored-transparent_packed_949: -448168260
-      colored-transparent_packed_35: 1183976737
       colored-transparent_packed_19: -914178950
       colored-transparent_packed_1043: 1818375971
       colored-transparent_packed_704: 305148114
@@ -23791,6 +23789,7 @@ TextureImporter:
       colored-transparent_packed_21: 1656686020
       colored-transparent_packed_214: 63331344
       Sword2: 1071563820
+      chestplat2: -954026513
       colored-transparent_packed_666: 1446491410
       colored-transparent_packed_492: -24857284
       colored-transparent_packed_717: -1556978464
@@ -23810,6 +23809,7 @@ TextureImporter:
       colored-transparent_packed_917: 1467430903
       colored-transparent_packed_722: -122898097
       colored-transparent_packed_1007: 2145141593
+      bow2: -1687619011
       colored-transparent_packed_848: 1957312411
       colored-transparent_packed_921: 2071889929
       colored-transparent_packed_821: -282966448

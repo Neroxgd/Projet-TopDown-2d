@@ -11,6 +11,8 @@ public class Key : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameObject.Find("PriestPNJ").GetComponent<PNJ>().textPNJ = newText;
+            GameObject.Find("TriggerDestroy").GetComponent<TriggerDestroy>().dropObject = true;
+            Destroy(GameObject.Find("CaveWall"));
             Destroy(gameObject);
         }
     }

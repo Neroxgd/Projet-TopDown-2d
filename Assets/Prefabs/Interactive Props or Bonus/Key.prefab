@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7590de8d75f4c64583691c697714580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newText: Merci, tu peux garder l'equipement en gage de remerciment
-  _pNJ: {fileID: 0}
+  newText: Merci, tu peux garder l'equipement et voici un objet qui pourra t'etre
+    utile en gage de remerciment

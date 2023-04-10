@@ -4,15 +4,12 @@ using UnityEngine;
 
 public enum ItemType
 {
-    Sword1,
-    Sword2,
-    Bow1,
+    Sword1, Sword2, Sword3, Sword4,
+    Bow1, Bow2, Bow3,
     HealthPotion,
-    Torch1,
-    Torch2,
-    Lamp,
-    Helmet,
-    Chestplate,
+    Torch1, Torch2, Lamp,
+    Helmet1, Helmet2, Helmet3, Helmet4, Helmet5,
+    Chestplate1, Chestplate2, Chestplate3, Chestplate4, Chestplate5,
     Wood,
 }
 

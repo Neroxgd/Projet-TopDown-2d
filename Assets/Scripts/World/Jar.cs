@@ -21,9 +21,9 @@ public class Jar : MonoBehaviour
         {
             var dir = Random.insideUnitCircle.normalized / 2;
             GameObject currentObj = Instantiate(objectsInJar[i], transform.position, Quaternion.identity, transform.parent);
-            currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled;
+            currentObj.GetComponent<Collider2D>().enabled = false;
             currentObj.transform.DOBlendableMoveBy(dir, 0.5f)
-            .OnComplete(() => currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled);
+            .OnComplete(() => currentObj.GetComponent<Collider2D>().enabled = true);
         }
         Destroy(gameObject);
     }
