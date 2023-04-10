@@ -12,7 +12,7 @@ public class LightObject : ItemObject, IEquipable
 
     public override string TextInv()
     {
-        return "(Y) to equipe item\n(T) to drop item";
+        return "(Y) pour equiper l'objet\n(T) pour lacher l'objet";
     }
     void Awake()
     {

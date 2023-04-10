@@ -402,6 +402,8 @@ MonoBehaviour:
   atkDefaultWeaponSpeed: 1
   speedAmmo: 20
   ammoUI: {fileID: 0}
+  atkMelee: {fileID: 8300000, guid: 180fe016e4763994cacbc75ba24d6c24, type: 3}
+  atkDistance: {fileID: 8300000, guid: 36515a54dd7da9f41807e7445139f152, type: 3}
 --- !u!114 &4071241587732431567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,6 +419,7 @@ MonoBehaviour:
   blackScreen: {fileID: 0}
   timeTransition: 0.5
   light2D: {fileID: 0}
+  death: {fileID: 8300000, guid: 3320e66a4838f794c8336f21632cac34, type: 3}
 --- !u!1 &6867876428003682746
 GameObject:
   m_ObjectHideFlags: 0

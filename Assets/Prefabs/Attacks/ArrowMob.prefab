@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3452846683508408023}
   - component: {fileID: 620779415864478235}
   - component: {fileID: 2400761649240350216}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ArrowMob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1618385636142718162}
   - component: {fileID: 8864444646033164285}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attack melee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7659106013799781022}
   - component: {fileID: 8657932382940165599}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -9,7 +9,7 @@ public class HealthPotionObject : ItemObject
 
     public override string TextInv()
     {
-        return $"health : +{health}\n(Y) to consume item\n(T) to drop item";
+        return $"health : +{health}\n(Y) pour utiliser l'objet\n(T) pour lacher l'objet";
     }
 
     void Awake()

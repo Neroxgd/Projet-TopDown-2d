@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2982850395141611272}
   - component: {fileID: 2982850395141611383}
   - component: {fileID: -459449021567514687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: jar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137,4 +137,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsInJar: []
-  instantiateHere: {fileID: 0}

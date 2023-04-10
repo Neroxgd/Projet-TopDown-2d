@@ -19,6 +19,8 @@ public abstract class IA : MonoBehaviour
     protected Vector3 DirectionToPlayer { get { return PlayerStatistic.Instance.transform.position - transform.position; } }
     public LayerMask layerMaskDetectedToNotEnterInCollison /*V player and entity*/, layerMask/*V player*/;
     private Vector3 directionRoaming;
+    public static bool isChasingPlayer;
+    public AudioClip musicFight;
     public GameObject[] objectsMobDrop;
     private SpriteRenderer spriteRenderer;
 
@@ -40,6 +42,8 @@ public abstract class IA : MonoBehaviour
             if (iaCurrentLife < 1)
             {
                 DropObjects();
+                if (!isChasingPlayer)
+                    AudioManager.Instance.PlayCashMusic();
                 Destroy(gameObject);
             }
         }
@@ -57,6 +61,7 @@ public abstract class IA : MonoBehaviour
     void Update()
     {
         if (DistanceBetweenIAandPlayer > 30) return;
+        isChasingPlayer = false;
         StateManager();
     }
 
@@ -73,6 +78,7 @@ public abstract class IA : MonoBehaviour
                     if (Physics2D.Raycast(transform.position, DirectionToPlayer, Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position), layerMask).transform.CompareTag("Player"))
                     {
                         state = State.ChasePlayer;
+                        AudioManager.Instance.PlayMusic(musicFight, false);
                         DOTween.Kill(transform);
                     }
                 break;
@@ -80,6 +86,7 @@ public abstract class IA : MonoBehaviour
                 if (DistanceBetweenIAandPlayer > detectPlayerRange * 2 || Physics2D.CircleCast(transform.position, 0.2f, DirectionToPlayer, 0.3f, layerMaskDetectedToNotEnterInCollison))
                 {
                     state = State.Roaming;
+                    AudioManager.Instance.PlayCashMusic();
                     break;
                 }
                 if (DistanceBetweenIAandPlayer < attackPlayerRange)
@@ -90,6 +97,7 @@ public abstract class IA : MonoBehaviour
                 ChasePlayer();
                 break;
             case State.AttackPlayer:
+                isChasingPlayer = true;
                 if (DistanceBetweenIAandPlayer > attackPlayerRange)
                 {
                     state = State.ChasePlayer;
@@ -123,6 +131,7 @@ public abstract class IA : MonoBehaviour
     {
         transform.position = Vector3.MoveTowards(transform.position, PlayerStatistic.Instance.transform.position, speedMove * 2 * Time.deltaTime);
         spriteRenderer.flipX = PlayerStatistic.Instance.transform.position.x < transform.position.x ? true : false;
+        isChasingPlayer = true;
     }
 
     protected abstract IEnumerator AttackPlayer();

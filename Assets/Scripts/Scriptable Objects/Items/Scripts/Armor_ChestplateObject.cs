@@ -10,7 +10,7 @@ public class Armor_ChestplateObject : ItemObject, IEquipable
 
     public override string TextInv()
     {
-        return $"defense : +{defPower}\n(Y) to equipe item\n(T) to drop item";
+        return $"defense : +{defPower}\n(Y) pour equiper l'objet\n(T) pour lacher l'objet";
     }
 
     void Awake()

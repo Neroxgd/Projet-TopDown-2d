@@ -12,7 +12,7 @@ public class WeaponMelee : ItemObject, IEquipable
 
     public override string TextInv()
     {
-        return $"attack : +{atkPower}\n(Y) to equipe item\n(T) to drop item";
+        return $"attack : +{atkPower}\n(Y) pour equiper l'objet\n(T) pour lacher l'objet";
     }
 
     void Awake()

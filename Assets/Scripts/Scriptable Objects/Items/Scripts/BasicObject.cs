@@ -5,7 +5,7 @@ public class BasicObject : ItemObject
 {
     public override string TextInv()
     {
-        return $"(T) to drop item";
+        return $"(T) pour lacher l'objet";
     }
 
     void Awake()

@@ -250,6 +250,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 63
+  musicFight: {fileID: 8300000, guid: fa205077bf382504b98646f484722a9f, type: 3}
   objectsMobDrop:
   - {fileID: 6397996225283839924, guid: 4717590c87759924b8f62ec46cc49720, type: 3}
 --- !u!1001 &8180941025439627619

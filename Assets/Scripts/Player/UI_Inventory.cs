@@ -10,6 +10,7 @@ public class UI_Inventory : MonoBehaviour
     [SerializeField] private InventoryObject inventory;
     [SerializeField] private Transform InstantiatHere;
     [SerializeField] private SlotsManager _slotsManager;
+    [SerializeField] private AudioClip openInventory;
     private int instantiatCount = 0;
     public int InstantiatCount { get { return instantiatCount; } set { instantiatCount = value; } }
     [SerializeField] private GameObject inv;
@@ -37,6 +38,7 @@ public class UI_Inventory : MonoBehaviour
             inv.SetActive(ShowInventory);
             if (!ShowInventory)
             {
+                AudioManager.Instance.PlayAudioSound(openInventory);
                 _slotsManager.IndexButton = -1;
                 _slotsManager.Desappears();
             }

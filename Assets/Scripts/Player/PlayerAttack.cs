@@ -15,6 +15,7 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
     [SerializeField] private float speedAmmo = 2f;
     [SerializeField] private TextMeshProUGUI ammoUI;
+    [SerializeField] private AudioClip atkMelee, atkDistance;
     private int ammoCount;
     public int AmmoCount
     {
@@ -34,6 +35,15 @@ public class PlayerAttack : MonoBehaviour
         PlayerStatistic.Instance.AttackMelee = 5;
     }
 
+    void LateUpdate()
+    {
+        // if (!IA.isChasingPlayer && AudioManager.Instance.cashMusic != AudioManager.Instance.audioSource.clip)
+        // {
+        //     AudioManager.Instance.PlayCashMusic();
+        //     print("zefzef");
+        // }  
+    }
+
     public void InputAttackMelee(InputAction.CallbackContext context)
     {
         if (context.started && !uI_Inventory.ShowInventory && CanAttack)
@@ -48,6 +58,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator AttackMelee()
     {
+        AudioManager.Instance.PlayAudioSound(atkMelee);
         CanAttack = false;
         GameObject atk = Instantiate(prefabAtkMelee, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Pratique.LookAtMouse2D(atk.transform);
@@ -77,6 +88,7 @@ public class PlayerAttack : MonoBehaviour
 
     IEnumerator AttackDistance()
     {
+        AudioManager.Instance.PlayAudioSound(atkDistance);
         CanAttack = false;
         GameObject atk = Instantiate(prefabAtkDistance, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Pratique.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
