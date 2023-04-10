@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private AudioClip menuAudio;
     private AudioSource audioSource;
     public static AudioManager Instance { private set; get; }
     void Awake()
@@ -15,7 +15,7 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        PlayMusic(audioClips[0]);
+        PlayMusic(menuAudio);
     }
 
     public void PlayMusic(AudioClip audioClip)
