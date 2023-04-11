@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using DG.Tweening;
@@ -8,10 +7,10 @@ using Nerox_gd;
 
 public class PlayerAttack : MonoBehaviour
 {
-    [SerializeField] private UI_Inventory uI_Inventory;
+    [SerializeField] private UI_Inventory _uiInventory;
     [SerializeField] private GameObject prefabAtkMelee, prefabAtkDistance, prefabAmmo;
     [SerializeField] private Sprite defaultSprite;
-    [SerializeField] private InventoryObject inventoryObject;
+    [SerializeField] private InventoryObject _inventoryObject;
     [SerializeField, Range(0.1f, 1)] private float atkDefaultWeaponSpeed = 0.5f;
     [SerializeField] private float speedAmmo = 2f;
     [SerializeField] private TextMeshProUGUI ammoUI;
@@ -46,13 +45,13 @@ public class PlayerAttack : MonoBehaviour
 
     public void InputAttackMelee(InputAction.CallbackContext context)
     {
-        if (context.started && !uI_Inventory.ShowInventory && CanAttack)
+        if (context.started && !_uiInventory.ShowInventory && CanAttack)
             StartCoroutine(AttackMelee());
     }
 
     public void InputAttackDistance(InputAction.CallbackContext context)
     {
-        if (context.started && !uI_Inventory.ShowInventory && CanAttack && WeaponDistance.isTypeEquiped)
+        if (context.started && !_uiInventory.ShowInventory && CanAttack && WeaponDistance.isTypeEquiped)
             StartCoroutine(AttackDistance());
     }
 
@@ -63,10 +62,10 @@ public class PlayerAttack : MonoBehaviour
         GameObject atk = Instantiate(prefabAtkMelee, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Pratique.LookAtMouse2D(atk.transform);
         if (WeaponMelee.isTypeEquiped)
-            for (int i = 0; i < inventoryObject.Container.Count; i++)
+            for (int i = 0; i < _inventoryObject.Container.Count; i++)
             {
-                WeaponMelee weaponMelee = inventoryObject.Container[i].item as WeaponMelee;
-                if (inventoryObject.Container[i].isEquiped && weaponMelee != null)
+                WeaponMelee weaponMelee = _inventoryObject.Container[i].item as WeaponMelee;
+                if (_inventoryObject.Container[i].isEquiped && weaponMelee != null)
                 {
                     atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = weaponMelee.prefab_World.GetComponent<SpriteRenderer>().sprite;
                     atkSpeed = weaponMelee.weaponSpeed;
@@ -92,10 +91,10 @@ public class PlayerAttack : MonoBehaviour
         CanAttack = false;
         GameObject atk = Instantiate(prefabAtkDistance, transform.position, Quaternion.identity, transform);
         atk.transform.rotation = Pratique.LookAt2D(atk.transform.rotation, Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue()) - transform.position);
-        for (int i = 0; i < inventoryObject.Container.Count; i++)
+        for (int i = 0; i < _inventoryObject.Container.Count; i++)
         {
-            WeaponDistance weaponDistance = inventoryObject.Container[i].item as WeaponDistance;
-            if (inventoryObject.Container[i].isEquiped && weaponDistance != null)
+            WeaponDistance weaponDistance = _inventoryObject.Container[i].item as WeaponDistance;
+            if (_inventoryObject.Container[i].isEquiped && weaponDistance != null)
             {
                 atk.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite = weaponDistance.prefab_World.GetComponent<SpriteRenderer>().sprite;
                 atkSpeed = weaponDistance.weaponSpeed;

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
   prefab_World: {fileID: 3139757657234131619, guid: 9aab976e6a92c424dacabfce5bde3b71, type: 3}
-  type: 6
+  type: 10
   description: 
   isStackable: 0
   objectCount: 1

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Health_Potion Object", menuName = "Inventory System/Consumable/Health_Potion")]

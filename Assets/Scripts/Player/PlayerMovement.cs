@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Vector2 direction;
     public static bool pausePlayer;
-    [SerializeField] SlotsManager slotsManager;
-    [SerializeField] private UI_Inventory uI_Inventory;
+    [SerializeField] SlotsManager _slotsManager;
+    [SerializeField] private UI_Inventory _uiInventory;
     public float SpeedPlayer { get; set; } = 5;
     [SerializeField] private Rigidbody2D rbPlayer;
     [SerializeField] private int indexRaw = 9;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         if (pausePlayer) return;
-        if (!uI_Inventory.ShowInventory)
+        if (!_uiInventory.ShowInventory)
         {
             direction = context.ReadValue<Vector2>();
             return;
@@ -28,19 +28,19 @@ public class PlayerMovement : MonoBehaviour
         direction = Vector2.zero;
         if (context.started)
         {
-            if (slotsManager.IndexButton == -1) return;
-            slotsManager.Desappears();
-            if (context.ReadValue<Vector2>() == Vector2.right && (slotsManager.IndexButton + 1) % indexRaw != 0)
-                slotsManager.IndexButton++;
-            else if (context.ReadValue<Vector2>() == Vector2.left && slotsManager.IndexButton % indexRaw != 0)
-                slotsManager.IndexButton--;
-            else if (context.ReadValue<Vector2>() == Vector2.up && slotsManager.IndexButton - indexRaw >= 0)
-                slotsManager.IndexButton -= indexRaw;
-            else if (context.ReadValue<Vector2>() == Vector2.down && slotsManager.IndexButton + indexRaw < slotsManager.transform.childCount)
-                slotsManager.IndexButton += indexRaw;
-            if (slotsManager.IndexButton < slotsManager.inventory.Container.Count)
-                slotsManager.ShowTextInventory(slotsManager.inventory.Container[slotsManager.IndexButton].item.TextInv());
-            Button[] buttons = slotsManager.GetComponentsInChildren<Button>();
+            if (_slotsManager.IndexButton == -1) return;
+            _slotsManager.Desappears();
+            if (context.ReadValue<Vector2>() == Vector2.right && (_slotsManager.IndexButton + 1) % indexRaw != 0)
+                _slotsManager.IndexButton++;
+            else if (context.ReadValue<Vector2>() == Vector2.left && _slotsManager.IndexButton % indexRaw != 0)
+                _slotsManager.IndexButton--;
+            else if (context.ReadValue<Vector2>() == Vector2.up && _slotsManager.IndexButton - indexRaw >= 0)
+                _slotsManager.IndexButton -= indexRaw;
+            else if (context.ReadValue<Vector2>() == Vector2.down && _slotsManager.IndexButton + indexRaw < _slotsManager.transform.childCount)
+                _slotsManager.IndexButton += indexRaw;
+            if (_slotsManager.IndexButton < _slotsManager.inventory.Container.Count)
+                _slotsManager.ShowTextInventory(_slotsManager.inventory.Container[_slotsManager.IndexButton].item.TextInv());
+            Button[] buttons = _slotsManager.GetComponentsInChildren<Button>();
             StartCoroutine(WaitForNav());
             IEnumerator WaitForNav()
             {
@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         else if (context.canceled)
         {
             StopAllCoroutines();
-            Button[] buttons = slotsManager.GetComponentsInChildren<Button>();
+            Button[] buttons = _slotsManager.GetComponentsInChildren<Button>();
             foreach (var button in buttons)
             {
                 Navigation StopNav = new Navigation();

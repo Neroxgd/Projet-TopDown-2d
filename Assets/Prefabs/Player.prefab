@@ -266,8 +266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cff66a2434940a6449a01d3165526f4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotsManager: {fileID: 0}
-  uI_Inventory: {fileID: 0}
+  _slotsManager: {fileID: 0}
+  _uiInventory: {fileID: 0}
   rbPlayer: {fileID: 2427964167995022083}
   indexRaw: 9
 --- !u!58 &2427964167995022086
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6cc6dcc0b17204f8a52b931641d55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
+  _inventory: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
   pickUpSound: {fileID: 8300000, guid: fd6b7e632ace75040876360b04818446, type: 3}
 --- !u!114 &6759724665872925174
 MonoBehaviour:
@@ -394,12 +394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76db47251ba3426438c30943af989af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uI_Inventory: {fileID: 0}
+  _uiInventory: {fileID: 0}
   prefabAtkMelee: {fileID: 2585694542484511278, guid: 1ae6a689b18010b449ce309a9f4f6544, type: 3}
   prefabAtkDistance: {fileID: 2585694542484511278, guid: 261d04c5c4a6c0e41b3e9e98e815c09a, type: 3}
   prefabAmmo: {fileID: 2585694542484511278, guid: cbef8a4edb726d24688929ff85c1d157, type: 3}
   defaultSprite: {fileID: -1716252731, guid: feb4d1c7e2b4e4b42b97c04c3b5fb0af, type: 3}
-  inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
+  _inventoryObject: {fileID: 11400000, guid: 78f2d08822de1cc4798e4716d2479fad, type: 2}
   atkDefaultWeaponSpeed: 1
   speedAmmo: 20
   ammoUI: {fileID: 0}

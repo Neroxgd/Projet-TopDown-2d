@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Armor_Helmet Object", menuName = "Inventory System/Items/Armor_Helmet")]

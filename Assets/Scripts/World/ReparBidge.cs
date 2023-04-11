@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ReparBidge : MonoBehaviour
 {
     [SerializeField] private InventoryObject _inventoryObject;
-    [SerializeField] private UI_Inventory _uI_Inventory;
+    [SerializeField] private UI_Inventory _uiInventory;
     [SerializeField] private GameObject tilmMapBridgeRepared;
 
     void OnTriggerEnter2D(Collider2D other)
@@ -16,7 +14,7 @@ public class ReparBidge : MonoBehaviour
                 {
                     tilmMapBridgeRepared.SetActive(true);
                     _inventoryObject.Container[i].amount -= 5;
-                    _uI_Inventory.UpdateInventory(_inventoryObject.Container[i].item);
+                    _uiInventory.UpdateInventory(_inventoryObject.Container[i].item);
                     Destroy(transform.parent.gameObject);
                 }
     }

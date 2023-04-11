@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Light Object", menuName = "Inventory System/Items/Light")]
@@ -25,9 +23,9 @@ public class LightObject : ItemObject, IEquipable
     void IEquipable.SetTypeEquiped(bool sign, SlotsManager slotsManager, InventorySlot inventorySlot)
     {
         isTypeEquiped = sign;
-        slotsManager.playerLight.gameObject.SetActive(isTypeEquiped ? true : false);
+        slotsManager._playerLight.gameObject.SetActive(isTypeEquiped ? true : false);
         LightObject instancelight = inventorySlot.item as LightObject;
-        slotsManager.playerLight.SetLightPlayer(instancelight.intensity, instancelight.distance, instancelight.angleLight);
+        slotsManager._playerLight.SetLightPlayer(instancelight.intensity, instancelight.distance, instancelight.angleLight);
     }
     void IEquipable.SetStatsPlayer() { }
     void IEquipable.ResetStatsPlayer() { }

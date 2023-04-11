@@ -8,14 +8,14 @@ public class SlotsManager : MonoBehaviour
 {
     public InventoryObject inventory;
     [SerializeField] private TextMeshProUGUI warningMessage;
-    public UI_Inventory uI_Inventory;
+    public UI_Inventory _uiInventory;
     public GameObject prefabSlot;
     public Transform world;
     public int IndexButton { get; set; } = -1;
     [SerializeField] private TextMeshProUGUI textItem, textStatsATKMelee, textStatsATKDistance, textStatsDEF;
     [SerializeField] private Color colorEquiped = Color.green;
     public GameObject uIAmmo;
-    public PlayerLight playerLight;
+    public PlayerLight _playerLight;
 
     public void DropItem(InputAction.CallbackContext context)
     {
@@ -30,7 +30,7 @@ public class SlotsManager : MonoBehaviour
             if (inventory.Container[IndexButton].amount > 1)
             {
                 inventory.Container[IndexButton].amount--;
-                uI_Inventory.UpdateInventory(inventory.Container[IndexButton].item);
+                _uiInventory.UpdateInventory(inventory.Container[IndexButton].item);
                 return;
             }
             Destroy(transform.GetChild(IndexButton).gameObject);
@@ -38,7 +38,7 @@ public class SlotsManager : MonoBehaviour
             inventory.Container.RemoveAt(IndexButton);
             IndexButton = -1;
             Desappears();
-            uI_Inventory.InstantiatCount--;
+            _uiInventory.InstantiatCount--;
         }
     }
     //j'ai refactor tout le script grace aux interface, l'ancienne version est tout en bas
@@ -85,7 +85,7 @@ public class SlotsManager : MonoBehaviour
             if (inventory.Container[IndexButton].amount > 1)
             {
                 inventory.Container[IndexButton].amount--;
-                uI_Inventory.UpdateInventory(inventory.Container[IndexButton].item);
+                _uiInventory.UpdateInventory(inventory.Container[IndexButton].item);
                 return;
             }
             Destroy(transform.GetChild(IndexButton).gameObject);
@@ -93,7 +93,7 @@ public class SlotsManager : MonoBehaviour
             inventory.Container.RemoveAt(IndexButton);
             IndexButton = -1;
             Desappears();
-            uI_Inventory.InstantiatCount--;
+            _uiInventory.InstantiatCount--;
         }
     }
 

@@ -1,9 +1,9 @@
-using UnityEngine;
-using UnityEditor;
+// using UnityEngine;
+// using UnityEditor;
 
-[CustomEditor(typeof(UI_Inventory))]
-public class GenerateButtonOnSlot : Editor
-{
+// [CustomEditor(typeof(UI_Inventory))]
+// public class GenerateButtonOnSlot : Editor
+// {
     /*private bool ifGenerate = true;
     public override void OnInspectorGUI()
     {
@@ -24,4 +24,4 @@ public class GenerateButtonOnSlot : Editor
         for (int i = 0; i < uI_Inventory.Slot.childCount; i++)
             Instantiate(uI_Inventory.ButtonToInstanciat, uI_Inventory.Slot.GetChild(i).transform.position, Quaternion.identity, uI_Inventory.ButtonSelect);
     }*/
-}
+// }

@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System.Reflection;
 
 [CreateAssetMenu(fileName = "New Weapon Melee", menuName = "Inventory System/Items/Weapon_Melee")]
 public class WeaponMelee : ItemObject, IEquipable
