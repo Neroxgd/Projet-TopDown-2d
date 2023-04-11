@@ -6,12 +6,14 @@ using DG.Tweening;
 public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] private InventoryObject inventory;
+    [SerializeField] private AudioClip pickUpSound;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         var item = other.GetComponent<Item>();
         if (item)
         {
+            AudioManager.Instance.PlayAudioSound(pickUpSound);
             if (item._Item.isStackable)
             {
                 inventory.AddItem(item._Item, item._Item.objectCount);

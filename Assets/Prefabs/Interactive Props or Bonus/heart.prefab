@@ -136,5 +136,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a29780d38a5554086bd2ccc0d5cd0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 9a90b8109a631224cb9259af6f34c013, type: 3}
+  audioClip: {fileID: 8300000, guid: fd6b7e632ace75040876360b04818446, type: 3}
   healtGiven: 10

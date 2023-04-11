@@ -36,9 +36,9 @@ public class UI_Inventory : MonoBehaviour
         {
             ShowInventory = !ShowInventory;
             inv.SetActive(ShowInventory);
+            AudioManager.Instance.PlayAudioSound(openInventory);
             if (!ShowInventory)
-            {
-                AudioManager.Instance.PlayAudioSound(openInventory);
+            {  
                 _slotsManager.IndexButton = -1;
                 _slotsManager.Desappears();
             }

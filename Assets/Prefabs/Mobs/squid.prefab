@@ -250,9 +250,12 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 63
+  musicFight: {fileID: 8300000, guid: fa205077bf382504b98646f484722a9f, type: 3}
+  targetSound: {fileID: 0}
   objectsMobDrop: []
   projectil: {fileID: 2585694542484511278, guid: 2fd764cabadf6fd4aaa6f932b27ed706, type: 3}
   speedProjectil: 5
+  colorProjectil: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &8180941025439627619
 PrefabInstance:
   m_ObjectHideFlags: 0

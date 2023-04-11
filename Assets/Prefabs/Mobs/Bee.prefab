@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 199fdb3fd421488459d7662a6d123099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iaLife: 7
+  iaLife: 12
   speedMove: 2
   detectPlayerRange: 4
   attackPlayerRange: 0.5
@@ -250,6 +250,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 62
+  musicFight: {fileID: 8300000, guid: fa205077bf382504b98646f484722a9f, type: 3}
+  targetSound: {fileID: 8300000, guid: d7e161caa8c61ae47836b0d169e1dac8, type: 3}
   objectsMobDrop: []
 --- !u!1001 &8180941025439627619
 PrefabInstance:

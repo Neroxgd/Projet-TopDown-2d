@@ -251,6 +251,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 63
+  musicFight: {fileID: 8300000, guid: fa205077bf382504b98646f484722a9f, type: 3}
+  targetSound: {fileID: 8300000, guid: 60c4b5db5317e0b40886552268d7d191, type: 3}
   objectsMobDrop: []
 --- !u!114 &4602039747972726086
 MonoBehaviour:

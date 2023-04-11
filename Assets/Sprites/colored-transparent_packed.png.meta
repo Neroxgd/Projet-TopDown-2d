@@ -21033,7 +21033,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: colored-transparent_packed_996
+      name: inventory_caseDouble
       rect:
         serializedVersion: 2
         x: 272
@@ -23016,8 +23016,8 @@ TextureImporter:
       colored-transparent_packed_96: 465256744
       arrowMob: 545584528
       chestplat1: -69190361
-      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_1060: 972421269
+      colored-transparent_packed_593: -1339455034
       colored-transparent_packed_377: 2131524282
       colored-transparent_packed_937: -1913774291
       colored-transparent_packed_531: 680138628
@@ -23346,13 +23346,13 @@ TextureImporter:
       colored-transparent_packed_490: 1420468030
       colored-transparent_packed_729: -780289872
       colored-transparent_packed_147: 1097133932
-      colored-transparent_packed_757: -1234439585
+      colored-transparent_packed_174: 915451845
       colored-transparent_packed_447: 1801135673
       colored-transparent_packed_664: 1244752160
       colored-transparent_packed_453: 1071330471
-      colored-transparent_packed_174: 915451845
-      colored-transparent_packed_684: -1850935285
+      colored-transparent_packed_757: -1234439585
       chestplat4: -1283632402
+      colored-transparent_packed_684: -1850935285
       colored-transparent_packed_362: -1194304227
       colored-transparent_packed_69: -1068284693
       colored-transparent_packed_750: 1745965580
@@ -23416,8 +23416,8 @@ TextureImporter:
       colored-transparent_packed_145: -217551712
       colored-transparent_packed_62: -262042614
       colored-transparent_packed_127: -856788203
-      colored-transparent_packed_769: 2026353647
       colored-transparent_packed_726: -777073330
+      colored-transparent_packed_769: 2026353647
       colored-transparent_packed_213: -135375633
       colored-transparent_packed_387: -1764900828
       colored-transparent_packed_291: -843195719
@@ -23454,7 +23454,6 @@ TextureImporter:
       colored-transparent_packed_685: -1161100100
       colored-transparent_packed_206: -344741446
       papyBarbePNJ: -1928932306
-      colored-transparent_packed_996: 987276751
       colored-transparent_packed_132: 563131562
       colored-transparent_packed_941: 987180021
       colored-transparent_packed_332: -563328192
@@ -23687,6 +23686,7 @@ TextureImporter:
       colored-transparent_packed_890: 1650814047
       colored-transparent_packed_117: 805078793
       colored-transparent_packed_300: -614751759
+      inventory_caseDouble: 987276751
       colored-transparent_packed_735: -134769085
       colored-transparent_packed_713: 408110414
       colored-transparent_packed_778: -1885736092

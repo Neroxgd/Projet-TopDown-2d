@@ -21,6 +21,7 @@ public abstract class IA : MonoBehaviour
     private Vector3 directionRoaming;
     public static bool isChasingPlayer;
     public AudioClip musicFight;
+    public AudioClip targetSound;
     public GameObject[] objectsMobDrop;
     private SpriteRenderer spriteRenderer;
 
@@ -44,6 +45,7 @@ public abstract class IA : MonoBehaviour
                 DropObjects();
                 if (!isChasingPlayer)
                     AudioManager.Instance.PlayCashMusic();
+                AudioManager.Instance.PlayAudioSound(targetSound);
                 Destroy(gameObject);
             }
         }
@@ -79,6 +81,7 @@ public abstract class IA : MonoBehaviour
                     {
                         state = State.ChasePlayer;
                         AudioManager.Instance.PlayMusic(musicFight, false);
+                        AudioManager.Instance.PlayAudioSound(targetSound);
                         DOTween.Kill(transform);
                     }
                 break;

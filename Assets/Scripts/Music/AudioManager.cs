@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private float timeFadeChangeMusic;
     void Awake()
     {
+        if (Instance != null && Instance != this)
+            Destroy(gameObject);
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
@@ -65,6 +67,8 @@ public class AudioManager : MonoBehaviour
     public void PlayAudioSound(AudioClip audioClip)
     {
         if (audioClip == null) return;
+        // if (audioSource == null)
+        //     audioSource = GetComponent<AudioSource>();
         audioSource.PlayOneShot(audioClip);
         // AudioClip audioClip = null;
         // foreach (AudioClip clip in audioClips)
