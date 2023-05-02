@@ -8,17 +8,21 @@ public class AudioManager : MonoBehaviour
     public AudioSource audioSource { get; private set; }
     public static AudioManager Instance { private set; get; }
     [SerializeField] private float timeFadeChangeMusic;
+
     void Awake()
     {
         if (Instance != null && Instance != this)
+        {
             Destroy(gameObject);
+            return;
+        }
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         PlayMusic(menuAudio);
     }
 
