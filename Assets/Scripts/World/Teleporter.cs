@@ -19,7 +19,7 @@ public class Teleporter : MonoBehaviour
             {
                 other.transform.position = pointToTeleporte.position + AddAxeSpawn;
                 light2D.intensity = intensityGlobalLight;
-                blackScreen.DOScale(Vector3.one * 140, timeTransition).SetDelay(1f);
+                blackScreen.DOScale(Vector3.one * 300, timeTransition).SetDelay(1f);
             });
         }
     }

@@ -1,12 +1,14 @@
 using UnityEngine;
-
+using DG.Tweening;
 
 public class SpawnGoblins : MonoBehaviour
 {
     [SerializeField] private AudioClip audioClipStart, audioClipEnd;
+    [SerializeField] private Transform blackScreen;
     [SerializeField] private PNJ _bullPNJ;
-    [SerializeField, TextArea(5, 20)] private string newText;
     [SerializeField] private GameObject[] goblins;
+    [SerializeField] private float timeTransition;
+    [SerializeField] private GameObject youWin;
     private int compt;
 
     public void Spawn()
@@ -26,6 +28,6 @@ public class SpawnGoblins : MonoBehaviour
     private void EndEvent()
     {
         AudioManager.Instance.PlayMusic(audioClipEnd);
-        _bullPNJ.textPNJ = newText;
+        blackScreen.DOScale(Vector3.one, timeTransition).OnComplete(() => youWin.SetActive(true));
     }
 }

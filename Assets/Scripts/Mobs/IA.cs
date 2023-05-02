@@ -62,7 +62,11 @@ public abstract class IA : MonoBehaviour
 
     void Update()
     {
-        if (DistanceBetweenIAandPlayer > 13) return;
+        if (DistanceBetweenIAandPlayer > 20)
+        {
+            DOTween.Kill(transform);
+            return;
+        }
         isChasingPlayer = false;
         StateManager();
     }

@@ -25,7 +25,7 @@ public class UI_Inventory : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 
     public void AfficheInventory(InputAction.CallbackContext context)
