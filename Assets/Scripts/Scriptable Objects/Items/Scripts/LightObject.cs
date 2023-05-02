@@ -14,7 +14,6 @@ public class LightObject : ItemObject, IEquipable
     }
     void Awake()
     {
-        type = ItemType.Torch1;
         isTypeEquiped = false;
     }
 

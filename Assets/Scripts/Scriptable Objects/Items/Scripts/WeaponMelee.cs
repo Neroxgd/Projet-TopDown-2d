@@ -14,7 +14,6 @@ public class WeaponMelee : ItemObject, IEquipable
 
     void Awake()
     {
-        type = ItemType.Sword1;
         isTypeEquiped = false;
     }
 

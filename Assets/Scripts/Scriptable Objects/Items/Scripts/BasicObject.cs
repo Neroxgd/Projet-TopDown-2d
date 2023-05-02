@@ -7,9 +7,4 @@ public class BasicObject : ItemObject
     {
         return $"(T) pour lacher l'objet";
     }
-
-    void Awake()
-    {
-        type = ItemType.Wood;
-    }
 }

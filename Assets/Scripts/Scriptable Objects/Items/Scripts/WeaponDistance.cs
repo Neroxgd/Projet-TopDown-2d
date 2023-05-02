@@ -14,7 +14,6 @@ public class WeaponDistance : ItemObject, IEquipable
 
     void Awake()
     {
-        type = ItemType.Bow1;
         isTypeEquiped = false;
     }
 

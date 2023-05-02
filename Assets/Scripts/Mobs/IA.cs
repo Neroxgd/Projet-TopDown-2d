@@ -23,6 +23,7 @@ public abstract class IA : MonoBehaviour
     public AudioClip targetSound;
     public GameObject[] objectsMobDrop;
     private SpriteRenderer spriteRenderer;
+    private static bool isSoundPlaying;
 
     private Image lifeBarre;
     protected enum State
@@ -61,7 +62,7 @@ public abstract class IA : MonoBehaviour
 
     void Update()
     {
-        if (DistanceBetweenIAandPlayer > 30) return;
+        if (DistanceBetweenIAandPlayer > 13) return;
         isChasingPlayer = false;
         StateManager();
     }
@@ -79,8 +80,12 @@ public abstract class IA : MonoBehaviour
                     if (Physics2D.Raycast(transform.position, DirectionToPlayer, Vector3.Distance(transform.position, PlayerStatistic.Instance.transform.position), layerMask).transform.CompareTag("Player"))
                     {
                         state = State.ChasePlayer;
-                        AudioManager.Instance.PlayMusic(musicFight, false);
-                        AudioManager.Instance.PlayAudioSound(targetSound);
+                        if (!isSoundPlaying)
+                        {
+                            AudioManager.Instance.PlayMusic(musicFight, false);
+                            AudioManager.Instance.PlayAudioSound(targetSound);
+                            StartCoroutine(TimeSound());
+                        }
                         DOTween.Kill(transform);
                     }
                 break;
@@ -155,5 +160,12 @@ public abstract class IA : MonoBehaviour
             currentObj.transform.DOBlendableMoveBy(dir, 0.5f)
             .OnComplete(() => currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled);
         }
+    }
+
+    IEnumerator TimeSound()
+    {
+        isSoundPlaying = true;
+        yield return new WaitForSeconds(2);
+        isSoundPlaying = false;
     }
 }

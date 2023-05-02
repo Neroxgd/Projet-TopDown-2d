@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 6623303408441075266}
   - component: {fileID: 6623303408441075277}
   - component: {fileID: 7846782131987270637}
+  - component: {fileID: 6435442574376022324}
   m_Layer: 6
   m_Name: Goblin Archer
   m_TagString: Entity
@@ -256,6 +257,21 @@ MonoBehaviour:
   projectil: {fileID: 2585694542484511278, guid: 567ea23efd95e7a4ca1a121b7226d6aa, type: 3}
   speedProjectil: 7
   colorProjectil: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+--- !u!114 &6435442574376022324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6623303408441075267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5563d1dcd2c20419d21a4c0fb6023f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &8180941025439627619
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,9 +9,4 @@ public class HealthPotionObject : ItemObject
     {
         return $"health : +{health}\n(Y) pour utiliser l'objet\n(T) pour lacher l'objet";
     }
-
-    void Awake()
-    {
-        type = ItemType.HealthPotion;
-    }
 }

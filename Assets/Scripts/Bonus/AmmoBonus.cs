@@ -7,7 +7,7 @@ public class AmmoBonus : Bonus
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerAttack>().AmmoCount += ammoCountBonus;
+            PlayerStatistic.Instance.transform.GetComponent<PlayerAttack>().AmmoCount += ammoCountBonus;
             AudioManager.Instance.PlayAudioSound(audioClip);
             Destroy(gameObject);
         }

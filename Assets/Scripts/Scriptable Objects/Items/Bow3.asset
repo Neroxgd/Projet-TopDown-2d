@@ -20,5 +20,5 @@ MonoBehaviour:
   objectCount: 1
   isEquipable: 1
   isConsumable: 0
-  atkPower: 25
+  atkPower: 50
   weaponSpeed: 0.4

@@ -7,7 +7,7 @@ public class HeartBonus : Bonus
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<PlayerLife>().TakeDamage(-healtGiven);
+            PlayerStatistic.Instance.transform.GetComponent<PlayerLife>().TakeDamage(-healtGiven);
             AudioManager.Instance.PlayAudioSound(audioClip);
             Destroy(gameObject);
         }

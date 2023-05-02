@@ -13,7 +13,6 @@ public class Armor_ChestplateObject : ItemObject, IEquipable
 
     void Awake()
     {
-        type = ItemType.Chestplate3;
         isTypeEquiped = false;
     }
     bool IEquipable.GetTypeEquiped() { return isTypeEquiped; }

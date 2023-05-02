@@ -26,6 +26,11 @@ public class AudioManager : MonoBehaviour
         PlayMusic(menuAudio);
     }
 
+    public void SetCashMusic(AudioClip clip)
+    {
+        cashMusic = clip;
+    }
+
     public void PlayMusic(AudioClip audioClip)
     {
         if (audioClip == null) return;
