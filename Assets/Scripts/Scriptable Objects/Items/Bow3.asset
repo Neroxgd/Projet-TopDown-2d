@@ -15,7 +15,7 @@ MonoBehaviour:
   prefabItem_UI: {fileID: 4173686599761962551, guid: cb694f9218ba2fd428349aa3ff90b7a6, type: 3}
   prefab_World: {fileID: 1984650627523828431, guid: 29026aab03d3fde4b9fe0b712435ee5b, type: 3}
   type: 6
-  description: 
+  description: bow level 3
   isStackable: 0
   objectCount: 1
   isEquipable: 1

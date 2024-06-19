@@ -160,9 +160,10 @@ public abstract class IA : MonoBehaviour
         {
             var dir = Random.insideUnitCircle.normalized / 2;
             GameObject currentObj = Instantiate(objectsMobDrop[i], transform.position, Quaternion.identity, transform.parent);
-            currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled;
+            Collider2D currentObjCollider2D = currentObj.GetComponent<Collider2D>();
+            currentObjCollider2D.enabled = !currentObjCollider2D.enabled;
             currentObj.transform.DOBlendableMoveBy(dir, 0.5f)
-            .OnComplete(() => currentObj.GetComponent<Collider2D>().enabled = !currentObj.GetComponent<Collider2D>().enabled);
+            .OnComplete(() => currentObjCollider2D.enabled = !currentObjCollider2D.enabled);
         }
     }
 
@@ -171,5 +172,12 @@ public abstract class IA : MonoBehaviour
         isSoundPlaying = true;
         yield return new WaitForSeconds(2);
         isSoundPlaying = false;
+    }
+
+    private void OnDestroy()
+    {
+        isSoundPlaying = false;
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.PlayCashMusic();
     }
 }

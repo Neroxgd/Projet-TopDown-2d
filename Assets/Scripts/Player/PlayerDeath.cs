@@ -17,7 +17,7 @@ public class PlayerDeath : MonoBehaviour
         {
             light2D.intensity = 1;
             transform.position = Checkpoint.currentcheckpoint;
-            blackScreen.DOScale(Vector3.one * 140, timeTransition).SetDelay(1f);
+            blackScreen.DOScale(Vector3.one * 300, timeTransition).SetDelay(1f);
         });
     }
 }
